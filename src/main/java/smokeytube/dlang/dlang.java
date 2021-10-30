@@ -6,7 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class dlang implements ModInitializer {
+public class Dlang implements ModInitializer {
 
 	public static final Item PRINGLES_CAN = new Item(new Item.Settings().group(ItemGroup.FOOD));
 
