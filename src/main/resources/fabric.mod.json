@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "dlang",
+  "id": "Dlang",
   "version": "${version}",
 
   "name": "dlang",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "smokeytube.dlang.dlang"
+      "smokeytube.dlang.Dlang"
     ]
   },
   "mixins": [
@@ -29,7 +29,7 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": "1.16.x",
     "java": ">=16"
   },
   "suggests": {
