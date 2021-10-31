@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "Dlang",
+  "id": "dlang",
   "version": "${version}",
 
   "name": "dlang",

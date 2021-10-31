@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "dlang:glasses"
+    },
+    "result": "dlang:cooked_glasses",
+    "experience": 1,
+    "cookingtime": 100
+}
