@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:emerald"
+    },
+    "result": "dlang:emerald_ingot",
+    "experience": 1,
+    "cookingtime": 100
+}
