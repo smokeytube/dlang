@@ -10,12 +10,12 @@ public class EmeraldToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 1100;
+        return 800;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 9F;
+        return 8F;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class EmeraldToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 20;
+        return 25;
     }
 
     @Override

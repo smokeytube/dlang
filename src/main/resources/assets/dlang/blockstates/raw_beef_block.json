@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "dlang:block/raw_beef_block"
+        }
+    }
+}
