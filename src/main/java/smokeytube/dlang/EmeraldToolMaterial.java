@@ -10,7 +10,7 @@ public class EmeraldToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 800;
+        return 1200;
     }
 
     @Override
