@@ -4,6 +4,7 @@
     "item.dlang.emerald_ingot": "Emerald Ingot",
     "item.dlang.pringles_can": "Pringles",
     "item.dlang.fortnite_card": "19 Dollar Fortnite Card",
+    "item.dlang.glue": "Glue",
 
     "item.dlang.emerald_pickaxe": "Emerald Pickaxe",
     "item.dlang.emerald_axe": "Emerald Axe",
@@ -12,5 +13,6 @@
     "item.dlang.emerald_shovel": "Emerald Shovel",
 
     "block.dlang.raw_beef_block": "Raw Beef Block",
-    "block.dlang.seung_gi_hun": "Seung Gi Hun Block"
+    "block.dlang.seung_gi_hun": "Seung Gi Hun Block",
+    "block.dlang.octa_plank": "The Octa Plank"
 }

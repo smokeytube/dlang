@@ -26,6 +26,7 @@ public class Dlang implements ModInitializer {
 	public static final FortniteCard FORTNITE_CARD = new FortniteCard(new Item.Settings().group(ItemGroup.MISC));
 	public static final Glasses GLASSES = new Glasses(new Item.Settings().group(ItemGroup.MISC));
 	public static final EmeraldIngot EMERALD_INGOT = new EmeraldIngot(new Item.Settings().group(ItemGroup.MISC));
+	public static final Glue GLUE = new Glue(new Item.Settings().group(ItemGroup.MISC));
 
 	// Weapons
 	public static ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -52,6 +53,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "fortnite_card"), FORTNITE_CARD);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "glasses"), GLASSES);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ingot"), EMERALD_INGOT);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "glue"), GLUE);
 
 		// Weapons
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_sword"), EMERALD_SWORD);
