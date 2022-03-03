@@ -43,6 +43,7 @@ public class Dlang implements ModInitializer {
 	// use .requirestool
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
 	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(5.0F, 5.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
+	public static final Block OCTA_PLANK = new Block(FabricBlockSettings.of(Material.WOOD).strength(15.0F, 15.0F).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
 
 	@Override
 	public void onInitialize() {
@@ -71,5 +72,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "seung_gi_hun"), new BlockItem(SEUNG_GI_HUN, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		Registry.register(Registry.BLOCK, new Identifier("dlang", "raw_beef_block"), RAW_BEEF_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "raw_beef_block"), new BlockItem(RAW_BEEF_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier("dlang", "octa_plank"), OCTA_PLANK);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "octa_plank"), new BlockItem(OCTA_PLANK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 	}
 }
