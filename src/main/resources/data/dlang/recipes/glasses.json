@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#|#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glass_pane"
+        },
+        "|": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "dlang:glasses"
+    }
+}
