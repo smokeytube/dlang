@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "dlang:item/emerald_axe"
+        "layer0": "dlang:item/stone_ohe"
     }
 }

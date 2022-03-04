@@ -1,19 +1,18 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "# ",
-        "|#",
+        " #",
         "|#"
     ],
     "key": {
         "#": {
-            "item": "minecraft:oak_planks"
+            "item": "minecraft:cobblestone"
         },
         "|": {
             "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "dlang:wooden_kaex"
+        "item": "dlang:stone_svrod"
     }
 }

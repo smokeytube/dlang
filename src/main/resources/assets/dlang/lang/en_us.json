@@ -12,9 +12,17 @@
     "item.dlang.emerald_sword": "Emerald Sword",
     "item.dlang.emerald_shovel": "Emerald Shovel",
 
+    "item.dlang.wooden_svrod": "Wooden Svrod",
+    "item.dlang.wooden_shvl": "Wooden Shvl",
     "item.dlang.wooden_kaex": "Wooden Kaex",
     "item.dlang.wooden_ohe": "Wooden Ohe",
-    "item.dlang.wooden_ickpaxe": "Wooden Ickpaxe",
+    "item.dlang.wooden_ickpaex": "Wooden Ickpaxe",
+
+    "item.dlang.stone_svrod": "Stone Svrod",
+    "item.dlang.stone_shvl": "Stone Shvl",
+    "item.dlang.stone_kaex": "Stone Kaex",
+    "item.dlang.stone_ohe": "Stone Ohe",
+    "item.dlang.stone_ickpaex": "Stone Ickpaxe",
 
     "block.dlang.raw_beef_block": "Raw Beef Block",
     "block.dlang.seung_gi_hun": "Seung Gi Hun Block",

@@ -31,19 +31,25 @@ public class Dlang implements ModInitializer {
 	public static final EmeraldIngot EMERALD_INGOT = new EmeraldIngot(new Item.Settings().group(ItemGroup.MISC));
 	public static final Glue GLUE = new Glue(new Item.Settings().group(ItemGroup.MISC));
 
-	// Weapons
-	public static ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-
 	//Tools
-	public static ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -7, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -7, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Wooden ools
-	public static ToolItem WOODEN_KAEX = new WoodenKaex(ToolMaterials.WOOD, 6, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem WOODEN_OHE = new WoodenOhe(ToolMaterials.WOOD, 0, 0, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem WOODEN_ICKPAEX = new WoodenIckPaex(ToolMaterials.WOOD, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem WOODEN_SHVL = new ShovelItem(ToolMaterials.WOOD, 1F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem WOODEN_KAEX = new OolKaex(ToolMaterials.WOOD, 6, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem WOODEN_OHE = new OolOhe(ToolMaterials.WOOD, 0, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem WOODEN_ICKPAEX = new OolIckPaex(ToolMaterials.WOOD, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	// Stone ools
+	public static final ToolItem STONE_SVROD = new SwordItem(ToolMaterials.STONE, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem STONE_SHVL = new ShovelItem(ToolMaterials.STONE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem STONE_KAEX = new OolKaex(ToolMaterials.STONE, 7, -3.2F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem STONE_OHE = new OolOhe(ToolMaterials.STONE, -1, -2, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem STONE_ICKPAEX = new OolIckPaex(ToolMaterials.STONE, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -63,26 +69,31 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ingot"), EMERALD_INGOT);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "glue"), GLUE);
 
-		// Weapons
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_sword"), EMERALD_SWORD);
 
 		//Tools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_sword"), EMERALD_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_shovel"), EMERALD_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_axe"), EMERALD_AXE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_pickaxe"), EMERALD_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_hoe"), EMERALD_HOE);
 
 		// Wooden Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_svrod"), WOODEN_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_shvl"), WOODEN_SHVL);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_kaex"), WOODEN_KAEX);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ohe"), WOODEN_OHE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ickpaex"), WOODEN_ICKPAEX);
-		
+		// Stone Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_svrod"), STONE_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_shvl"), STONE_SHVL);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_kaex"), STONE_KAEX);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ohe"), STONE_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ickpaex"), STONE_ICKPAEX);
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier("dlang", "cooked_glasses"), COOKED_GLASSES);
 
 		// Blocks and their respective items
-
 		Registry.register(Registry.BLOCK, new Identifier("dlang", "seung_gi_hun"), SEUNG_GI_HUN);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "seung_gi_hun"), new BlockItem(SEUNG_GI_HUN, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		Registry.register(Registry.BLOCK, new Identifier("dlang", "raw_beef_block"), RAW_BEEF_BLOCK);
