@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "dlang:stone_ickpaex"
+        },
+        "title": "Gedgin Aen Yupgraed",
+        "description": "Cunstrupt an beda ickpaex",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "background": "dlang:stone_ickpaex"
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "dlang:stone_ickpaex"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
