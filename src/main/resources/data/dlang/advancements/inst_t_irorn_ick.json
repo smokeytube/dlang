@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "dlang:iron_ickpaex"
+        },
+        "title": "Inst T Irorn Ick",
+        "description": "Yupgraed yo ickpaex",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "background": "dlang:iron_ickpaex"
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "dlang:iron_ickpaex"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

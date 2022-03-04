@@ -50,6 +50,12 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem STONE_KAEX = new OolKaex(ToolMaterials.STONE, 7, -3.2F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem STONE_OHE = new OolOhe(ToolMaterials.STONE, -1, -2, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem STONE_ICKPAEX = new OolIckPaex(ToolMaterials.STONE, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	// Iron ools
+	public static final ToolItem IRON_SVROD = new SwordItem(ToolMaterials.IRON, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem IRON_SHVL = new ShovelItem(ToolMaterials.IRON, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem IRON_KAEX = new OolKaex(ToolMaterials.IRON, 6, -3.1F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem IRON_OHE = new OolOhe(ToolMaterials.IRON, -2, -1, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem IRON_ICKPAEX = new OolIckPaex(ToolMaterials.IRON, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -89,6 +95,12 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_kaex"), STONE_KAEX);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ohe"), STONE_OHE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ickpaex"), STONE_ICKPAEX);
+		// Iron Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_svrod"), IRON_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_shvl"), IRON_SHVL);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_kaex"), IRON_KAEX);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_ohe"), IRON_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_ickpaex"), IRON_ICKPAEX);
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier("dlang", "cooked_glasses"), COOKED_GLASSES);
