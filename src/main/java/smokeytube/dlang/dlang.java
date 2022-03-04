@@ -33,10 +33,10 @@ public class Dlang implements ModInitializer {
 
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-	public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -7, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Wooden ools
 	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -62,6 +62,24 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem GOLD_KAEX = new OolKaex(ToolMaterials.GOLD, 6, -3F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem GOLD_OHE = new OolOhe(ToolMaterials.GOLD, 0, -3, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem GOLD_ICKPAEX = new OolIckPaex(ToolMaterials.GOLD, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	// Diamond ools
+	public static final ToolItem DIAMOND_SVROD = new SwordItem(ToolMaterials.DIAMOND, 2, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem DIAMOND_SHVL = new ShovelItem(ToolMaterials.DIAMOND, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem DIAMOND_KAEX = new OolKaex(ToolMaterials.DIAMOND, 5, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem DIAMOND_OHE = new OolOhe(ToolMaterials.DIAMOND, -3, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem DIAMOND_ICKPAEX = new OolIckPaex(ToolMaterials.DIAMOND, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	// Netherite ools
+	public static final ToolItem NETHERITE_SVROD = new SwordItem(ToolMaterials.NETHERITE, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem NETHERITE_SHVL = new ShovelItem(ToolMaterials.NETHERITE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem NETHERITE_KAEX = new OolKaex(ToolMaterials.NETHERITE, 5, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem NETHERITE_OHE = new OolOhe(ToolMaterials.NETHERITE, -4, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem NETHERITE_ICKPAEX = new OolIckPaex(ToolMaterials.NETHERITE, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	// Emerald ools
+	public static final ToolItem EMERALD_SVROD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem EMERALD_SHVL = new ShovelItem(EmeraldToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_KAEX = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_ICKPAEX = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_OHE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -113,6 +131,24 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_kaex"), GOLD_KAEX);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_ohe"), GOLD_OHE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_ickpaex"), GOLD_ICKPAEX);
+		// Diamond Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_svrod"), DIAMOND_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_shvl"), DIAMOND_SHVL);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_kaex"), DIAMOND_KAEX);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_ohe"), DIAMOND_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_ickpaex"), DIAMOND_ICKPAEX);
+		// Netherite Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_svrod"), NETHERITE_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_shvl"), NETHERITE_SHVL);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_kaex"), NETHERITE_KAEX);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_ohe"), NETHERITE_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_ickpaex"), NETHERITE_ICKPAEX);
+		// Emerald Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_svrod"), EMERALD_SVROD);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_shvl"), EMERALD_SHVL);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_kaex"), EMERALD_KAEX);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ohe"), EMERALD_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ickpaex"), EMERALD_ICKPAEX);
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier("dlang", "cooked_glasses"), COOKED_GLASSES);

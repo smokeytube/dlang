@@ -1,0 +1,21 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+" #",
+"|#",
+"| "
+],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald_ingot"
+        },
+        "|": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "dlang:emerald_ohe"
+    }
+}
+        
