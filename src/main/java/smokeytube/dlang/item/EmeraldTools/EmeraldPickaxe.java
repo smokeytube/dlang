@@ -1,4 +1,4 @@
-package smokeytube.dlang.item;
+package smokeytube.dlang.item.EmeraldTools;
 
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;

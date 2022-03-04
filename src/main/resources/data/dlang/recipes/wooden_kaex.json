@@ -1,19 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "##",
+        "# ",
         "|#",
-        "| "
+        "|#"
     ],
     "key": {
         "#": {
-            "item": "dlang:emerald_ingot"
+            "item": "minecraft:planks"
         },
         "|": {
             "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "dlang:emerald_axe"
+        "item": "dlang:wooden_kaex"
     }
 }

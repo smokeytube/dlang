@@ -1,12 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "dlang:raw_beef_block"
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "dlang:raw_beef_block"
+        }
+    ],
+    "result": {
+        "item": "minecraft:beef",
+        "count": 9
     }
-  ],
-  "result": {
-    "item": "minecraft:beef",
-    "count": 9
-  }
 }

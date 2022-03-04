@@ -1,6 +1,8 @@
 package smokeytube.dlang;
 
 import smokeytube.dlang.item.*;
+import smokeytube.dlang.item.EmeraldTools.*;
+import smokeytube.dlang.item.Ools.*;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -13,6 +15,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -33,9 +36,12 @@ public class Dlang implements ModInitializer {
 
 	//Tools
 	public static ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 1, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+
+	// Wooden ools
+	public static ToolItem WOODEN_KAEX = new WoodenKaex(ToolMaterials.WOOD, 6, -3F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -63,6 +69,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_axe"), EMERALD_AXE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_pickaxe"), EMERALD_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_hoe"), EMERALD_HOE);
+
+		// Wooden Ools
+		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_kaex"), WOODEN_KAEX);
 		
 
 		// Food
