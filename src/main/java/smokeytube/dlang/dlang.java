@@ -38,11 +38,12 @@ public class Dlang implements ModInitializer {
 	public static ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -3, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -7, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Wooden ools
 	public static ToolItem WOODEN_KAEX = new WoodenKaex(ToolMaterials.WOOD, 6, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static ToolItem WOODEN_OHE = new WoodenOhe(ToolMaterials.WOOD, 0, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem WOODEN_OHE = new WoodenOhe(ToolMaterials.WOOD, 0, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static ToolItem WOODEN_ICKPAEX = new WoodenIckPaex(ToolMaterials.WOOD, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -74,6 +75,7 @@ public class Dlang implements ModInitializer {
 		// Wooden Ools
 		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_kaex"), WOODEN_KAEX);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ohe"), WOODEN_OHE);
+		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ickpaex"), WOODEN_ICKPAEX);
 		
 
 		// Food
