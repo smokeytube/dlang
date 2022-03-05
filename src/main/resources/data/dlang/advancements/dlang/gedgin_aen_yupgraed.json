@@ -1,27 +1,31 @@
 {
     "parent": "minecraft:story/mine_stone",
     "display": {
-        "icon": {
-            "item": "dlang:stone_ickpaex"
-        },
-        "title": "Gedgin Aen Yupgraed",
-        "description": "Cunstrupt an beda ickpaex",
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true
+      "icon": {
+        "item": "dlang:stone_ickpaex"
+      },
+      "title": "Gedgin Aen Yupgraed",
+      "description": "Cunstrupt an beda ickpaex",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
     },
     "criteria": {
-        "requirement": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": [
-                            "dlang:stone_ickpaex"
-                        ]
-                    }
-                ]
+      "stone_ickpaex": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": "dlang:stone_ickpaex"
             }
+          ]
         }
-    }
-}
+      }
+    },
+    "requirements": [
+      [
+        "stone_ickpaex"
+      ]
+    ]
+  }
