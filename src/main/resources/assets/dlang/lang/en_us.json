@@ -56,5 +56,7 @@
 
     "block.dlang.raw_beef_block": "Raw Beef Block",
     "block.dlang.seung_gi_hun": "Seung Gi Hun Block",
-    "block.dlang.octa_plank": "The Octa Plank"
+    "block.dlang.octa_plank": "The Octa Plank",
+
+    "item.dlang.cat_cube_spawn_egg": "Cat Cube Spawn Egg"
 }

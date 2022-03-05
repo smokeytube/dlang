@@ -19,6 +19,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterials;
@@ -102,6 +103,9 @@ public class Dlang implements ModInitializer {
 		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
 	);
 
+	// Spawn Eggs
+	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
+
 	@Override
 	public void onInitialize() {
 		// Items
@@ -175,5 +179,8 @@ public class Dlang implements ModInitializer {
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
+		
+		// Spawn Eggs
+		Registry.register(Registry.ITEM, new Identifier("dlang", "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
 	}
 }
