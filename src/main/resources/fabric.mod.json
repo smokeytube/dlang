@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "smokeytube.dlang.Dlang"
+    ],
+    "client": [
+      "smokeytube.dlang.DlangClient"
     ]
   },
   "mixins": [

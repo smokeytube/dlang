@@ -1,14 +1,20 @@
 package smokeytube.dlang;
 
+import smokeytube.dlang.entity.CubeEntity;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
@@ -89,6 +95,13 @@ public class Dlang implements ModInitializer {
 	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(5.0F, 5.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
 	public static final Block OCTA_PLANK = new Block(FabricBlockSettings.of(Material.WOOD).strength(15.0F, 15.0F).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
 
+	// Entity
+	public static final EntityType<CubeEntity> CUBE = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier("dlang", "cube"),
+		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+	);
+
 	@Override
 	public void onInitialize() {
 		// Items
@@ -159,5 +172,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dlang", "raw_beef_block"), new BlockItem(RAW_BEEF_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		Registry.register(Registry.BLOCK, new Identifier("dlang", "octa_plank"), OCTA_PLANK);
 		Registry.register(Registry.ITEM, new Identifier("dlang", "octa_plank"), new BlockItem(OCTA_PLANK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		// Entity
+		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
 	}
 }
