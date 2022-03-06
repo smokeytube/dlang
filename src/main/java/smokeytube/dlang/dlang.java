@@ -3,6 +3,7 @@ package smokeytube.dlang;
 import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
 import smokeytube.dlang.entity.CubeEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
+import smokeytube.dlang.entity.TreeEntity;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
@@ -113,9 +114,16 @@ public class Dlang implements ModInitializer {
 		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, HackerNamedFourChanEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
 	);
 
+	public static final EntityType<TreeEntity> TREE = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(MOD_ID, "tree"),
+		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+	);
+
 	// Spawn Eggs
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item HACKER_NAMED_FOUR_CHAN_SPAWN_EGG = new SpawnEggItem(HACKER_NAMED_FOUR_CHAN, 0x4a4a4a, 0x212121, new Item.Settings().group(ItemGroup.MISC));
+	public static final Item TREE_SPAWN_EGG = new SpawnEggItem(TREE, 0x402a09, 0x407822, new Item.Settings().group(ItemGroup.MISC));
 
 	// Status Effects
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
@@ -194,10 +202,12 @@ public class Dlang implements ModInitializer {
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(HACKER_NAMED_FOUR_CHAN, HackerNamedFourChanEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(TREE, TreeEntity.createMobAttributes());
 		
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hacker_named_four_chan_spawn_egg"), HACKER_NAMED_FOUR_CHAN_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tree_spawn_egg"), TREE_SPAWN_EGG);
 
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
