@@ -15,7 +15,7 @@ public class HackerNamedFourChanRenderer extends BipedEntityRenderer<HackerNamed
 
     @Override
     public Identifier getTexture(HackerNamedFourChanEntity entity) {
-        return new Identifier(Dlang.MOD_ID, "textures/entity/skeleton.png");
+        return new Identifier(Dlang.MOD_ID, "textures/entity/chan.png");
     }
 
 }
