@@ -1,10 +1,12 @@
 package smokeytube.dlang;
 
 import smokeytube.dlang.entity.CubeEntity;
+import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
-
+import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
+import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -30,6 +32,7 @@ import net.minecraft.util.registry.Registry;
 // трол
 @SuppressWarnings("nullPointerException")
 public class Dlang implements ModInitializer {
+	public static final String MOD_ID = "dlang"; // идентификатор мода
 
 	// Items
 	public static final PringlesCan PRINGLES_CAN = new PringlesCan(new Item.Settings().group(ItemGroup.MISC));
@@ -99,88 +102,102 @@ public class Dlang implements ModInitializer {
 	// Entity
 	public static final EntityType<CubeEntity> CUBE = Registry.register(
 		Registry.ENTITY_TYPE,
-		new Identifier("dlang", "cube"),
+		new Identifier(MOD_ID, "cube"),
 		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+	);
+	public static final EntityType<HackerNamedFourChanEntity> HACKER_NAMED_FOUR_CHAN = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(MOD_ID, "hacker_named_four_chan"),
+		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, HackerNamedFourChanEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
 	);
 
 	// Spawn Eggs
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
+	public static final Item HACKER_NAMED_FOUR_CHAN_SPAWN_EGG = new SpawnEggItem(HACKER_NAMED_FOUR_CHAN, 0x4a4a4a, 0x212121, new Item.Settings().group(ItemGroup.MISC));
 
 	@Override
 	public void onInitialize() {
 		// Items
-		Registry.register(Registry.ITEM, new Identifier("dlang", "pringles_can"), PRINGLES_CAN);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "fortnite_card"), FORTNITE_CARD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "glasses"), GLASSES);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ingot"), EMERALD_INGOT);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "glue"), GLUE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pringles_can"), PRINGLES_CAN);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fortnite_card"), FORTNITE_CARD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glasses"), GLASSES);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ingot"), EMERALD_INGOT);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glue"), GLUE);
 
 
 		//Tools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_sword"), EMERALD_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_shovel"), EMERALD_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_axe"), EMERALD_AXE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_pickaxe"), EMERALD_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_hoe"), EMERALD_HOE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_shovel"), EMERALD_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_axe"), EMERALD_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_pickaxe"), EMERALD_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_hoe"), EMERALD_HOE);
 
 		// Wooden Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_svrod"), WOODEN_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_shvl"), WOODEN_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_kaex"), WOODEN_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ohe"), WOODEN_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "wooden_ickpaex"), WOODEN_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_svrod"), WOODEN_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_shvl"), WOODEN_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_kaex"), WOODEN_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_ohe"), WOODEN_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_ickpaex"), WOODEN_ICKPAEX);
 		// Stone Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_svrod"), STONE_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_shvl"), STONE_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_kaex"), STONE_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ohe"), STONE_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "stone_ickpaex"), STONE_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_svrod"), STONE_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_shvl"), STONE_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_kaex"), STONE_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_ohe"), STONE_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_ickpaex"), STONE_ICKPAEX);
 		// Iron Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_svrod"), IRON_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_shvl"), IRON_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_kaex"), IRON_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_ohe"), IRON_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "iron_ickpaex"), IRON_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_svrod"), IRON_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_shvl"), IRON_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_kaex"), IRON_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_ohe"), IRON_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_ickpaex"), IRON_ICKPAEX);
 		// Gold Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_svrod"), GOLD_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_shvl"), GOLD_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_kaex"), GOLD_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_ohe"), GOLD_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "gold_ickpaex"), GOLD_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold_svrod"), GOLD_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold_shvl"), GOLD_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold_kaex"), GOLD_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold_ohe"), GOLD_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold_ickpaex"), GOLD_ICKPAEX);
 		// Diamond Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_svrod"), DIAMOND_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_shvl"), DIAMOND_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_kaex"), DIAMOND_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_ohe"), DIAMOND_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "diamond_ickpaex"), DIAMOND_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_svrod"), DIAMOND_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_shvl"), DIAMOND_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_kaex"), DIAMOND_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_ohe"), DIAMOND_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_ickpaex"), DIAMOND_ICKPAEX);
 		// Netherite Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_svrod"), NETHERITE_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_shvl"), NETHERITE_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_kaex"), NETHERITE_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_ohe"), NETHERITE_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "netherite_ickpaex"), NETHERITE_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_svrod"), NETHERITE_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_shvl"), NETHERITE_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_kaex"), NETHERITE_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_ohe"), NETHERITE_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_ickpaex"), NETHERITE_ICKPAEX);
 		// Emerald Ools
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_svrod"), EMERALD_SVROD);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_shvl"), EMERALD_SHVL);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_kaex"), EMERALD_KAEX);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ohe"), EMERALD_OHE);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "emerald_ickpaex"), EMERALD_ICKPAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_svrod"), EMERALD_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_shvl"), EMERALD_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_kaex"), EMERALD_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ohe"), EMERALD_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ickpaex"), EMERALD_ICKPAEX);
 
 		// Food
-		Registry.register(Registry.ITEM, new Identifier("dlang", "cooked_glasses"), COOKED_GLASSES);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_glasses"), COOKED_GLASSES);
 
 		// Blocks and their respective items
-		Registry.register(Registry.BLOCK, new Identifier("dlang", "seung_gi_hun"), SEUNG_GI_HUN);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "seung_gi_hun"), new BlockItem(SEUNG_GI_HUN, new Item.Settings().group(ItemGroup.DECORATIONS)));
-		Registry.register(Registry.BLOCK, new Identifier("dlang", "raw_beef_block"), RAW_BEEF_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "raw_beef_block"), new BlockItem(RAW_BEEF_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
-		Registry.register(Registry.BLOCK, new Identifier("dlang", "octa_plank"), OCTA_PLANK);
-		Registry.register(Registry.ITEM, new Identifier("dlang", "octa_plank"), new BlockItem(OCTA_PLANK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seung_gi_hun"), new BlockItem(SEUNG_GI_HUN, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "raw_beef_block"), RAW_BEEF_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_beef_block"), new BlockItem(RAW_BEEF_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "octa_plank"), OCTA_PLANK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "octa_plank"), new BlockItem(OCTA_PLANK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(HACKER_NAMED_FOUR_CHAN, HackerNamedFourChanEntity.createMobAttributes());
 		
 		// Spawn Eggs
-		Registry.register(Registry.ITEM, new Identifier("dlang", "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hacker_named_four_chan_spawn_egg"), HACKER_NAMED_FOUR_CHAN_SPAWN_EGG);
+
+		// Sounds
+		HackerNamedFourChanSoundEvents.register();
+
+		// Init
+		SpawnInit.init();
 	}
 }

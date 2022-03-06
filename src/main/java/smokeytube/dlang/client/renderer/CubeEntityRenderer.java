@@ -1,5 +1,6 @@
 package smokeytube.dlang.client.renderer;
 
+import smokeytube.dlang.Dlang;
 import smokeytube.dlang.client.model.CubeEntityModel;
 import smokeytube.dlang.entity.CubeEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
@@ -14,7 +15,7 @@ public class CubeEntityRenderer extends MobEntityRenderer<CubeEntity, CubeEntity
 
     @Override
     public Identifier getTexture(CubeEntity entity) {
-        return new Identifier("dlang", "textures/entity/cube.png");
+        return new Identifier(Dlang.MOD_ID, "textures/entity/cube.png");
     }
 
 }

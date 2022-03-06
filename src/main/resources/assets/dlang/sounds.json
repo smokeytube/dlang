@@ -1,0 +1,37 @@
+{
+    "entity.chan.ambient.one": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:entity_chan_ambient_one"
+        ],
+        "subtitle": "dlang:subtitles.entity.chan.ambient.one"
+    },
+    "entity.chan.ambient.two": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:entity_chan_ambient_two"
+        ],
+        "subtitle": "dlang:subtitles.entity.chan.ambient.two"
+    },
+    "entity.chan.ambient.three": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:entity_chan_ambient_three"
+        ],
+        "subtitle": "dlang:subtitles.entity.chan.ambient.three"
+    },
+    "entity.chan.ambient.four": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:entity_chan_ambient_four"
+        ],
+        "subtitle": "dlang:subtitles.entity.chan.ambient.four"
+    },
+    "entity.chan.ambient.five": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:entity_chan_ambient_five"
+        ],
+        "subtitle": "dlang:subtitles.entity.chan.ambient.five"
+    }
+}
