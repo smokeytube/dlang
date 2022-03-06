@@ -1,5 +1,6 @@
 package smokeytube.dlang;
 
+import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
 import smokeytube.dlang.entity.CubeEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.item.*;
@@ -17,6 +18,7 @@ import net.minecraft.block.Material;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
@@ -115,6 +117,9 @@ public class Dlang implements ModInitializer {
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item HACKER_NAMED_FOUR_CHAN_SPAWN_EGG = new SpawnEggItem(HACKER_NAMED_FOUR_CHAN, 0x4a4a4a, 0x212121, new Item.Settings().group(ItemGroup.MISC));
 
+	// Status Effects
+	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
+
 	@Override
 	public void onInitialize() {
 		// Items
@@ -196,6 +201,9 @@ public class Dlang implements ModInitializer {
 
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
+
+		// Status Effects
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"), SPONSORED_BY_RAID_SHADOW_LEGENDS);
 
 		// Init
 		SpawnInit.init();
