@@ -10,6 +10,10 @@ public class TreeEntityModel extends EntityModel<TreeEntity> {
 
     private final ModelPart base;
 
+    public ModelPart trunk;
+    public ModelPart leaves;
+
+    // I have no idea how to model
     public TreeEntityModel() {
         this.textureHeight = 64;
         this.textureWidth = 64;
@@ -17,79 +21,80 @@ public class TreeEntityModel extends EntityModel<TreeEntity> {
         base = new ModelPart(this, 0, 0);
 
         //Trunk
-        base.addCuboid(-6, -6, -6, 16, 16, 16);
-        base.addCuboid(-6, -22, -6, 16, 16, 16);
-        base.addCuboid(-6, -38, -6, 16, 16, 16);
-        base.addCuboid(-6, -54, -6, 16, 16, 16);
-        base.addCuboid(-6, -70, -6, 16, 16, 16);
+        this.trunk = new ModelPart(this, 0, 0);
+        this.trunk.addCuboid(-6, -22, -6, 16, 84, 16);
+        base.addChild(this.trunk);
 
         //Leaves
+        this.leaves = new ModelPart(this, 0, 0);
         //Top
-        base.addCuboid(-6, -86, -6, 16, 16, 16);
-        base.addCuboid(-22, -86, -6, 16, 16, 16);
-        base.addCuboid(10, -86, -6, 16, 16, 16);
-        base.addCuboid(-6, -86, -22, 16, 16, 16);
-        base.addCuboid(-6, -86, 10, 16, 16, 16);
+        this.leaves.addCuboid(-6, -86, -6, 16, 16, 16);
+        this.leaves.addCuboid(-22, -86, -6, 16, 16, 16);
+        this.leaves.addCuboid(10, -86, -6, 16, 16, 16);
+        this.leaves.addCuboid(-6, -86, -22, 16, 16, 16);
+        this.leaves.addCuboid(-6, -86, 10, 16, 16, 16);
         //Second
-        base.addCuboid(-22, -70, -6, 16, 16, 16);
-        base.addCuboid(10, -70, -6, 16, 16, 16);
-        base.addCuboid(-6, -70, -22, 16, 16, 16);
-        base.addCuboid(-6, -70, 10, 16, 16, 16);
+        this.leaves.addCuboid(-22, -70, -6, 16, 16, 16);
+        this.leaves.addCuboid(10, -70, -6, 16, 16, 16);
+        this.leaves.addCuboid(-6, -70, -22, 16, 16, 16);
+        this.leaves.addCuboid(-6, -70, 10, 16, 16, 16);
 
-        base.addCuboid(10, -70, 10, 16, 16, 16);
-        base.addCuboid(10, -70, -22, 16, 16, 16);
+        this.leaves.addCuboid(10, -70, 10, 16, 16, 16);
+        this.leaves.addCuboid(10, -70, -22, 16, 16, 16);
 
         // Third
-        base.addCuboid(-22, -54, -22, 16, 16, 16);
-        base.addCuboid(10, -54, 10, 16, 16, 16);
-        base.addCuboid(10, -54, -22, 16, 16, 16);
-        base.addCuboid(-22, -54, 10, 16, 16, 16);
-        base.addCuboid(-22, -54, -6, 16, 16, 16);
-        base.addCuboid(10, -54, -6, 16, 16, 16);
-        base.addCuboid(-6, -54, -22, 16, 16, 16);
-        base.addCuboid(-6, -54, 10, 16, 16, 16);
+        this.leaves.addCuboid(-22, -54, -22, 16, 16, 16);
+        this.leaves.addCuboid(10, -54, 10, 16, 16, 16);
+        this.leaves.addCuboid(10, -54, -22, 16, 16, 16);
+        this.leaves.addCuboid(-22, -54, 10, 16, 16, 16);
+        this.leaves.addCuboid(-22, -54, -6, 16, 16, 16);
+        this.leaves.addCuboid(10, -54, -6, 16, 16, 16);
+        this.leaves.addCuboid(-6, -54, -22, 16, 16, 16);
+        this.leaves.addCuboid(-6, -54, 10, 16, 16, 16);
 
-        base.addCuboid(-38, -54, 26, 16, 16, 16);
-        base.addCuboid(-38, -54, 10, 16, 16, 16);
-        base.addCuboid(-38, -54, -6, 16, 16, 16);
-        base.addCuboid(-38, -54, -22, 16, 16, 16);
-        base.addCuboid(-22, -54, -38, 16, 16, 16);
-        base.addCuboid(-6, -54, -38, 16, 16, 16);
-        base.addCuboid(10, -54, -38, 16, 16, 16);
-        base.addCuboid(26, -54, -38, 16, 16, 16);
-        base.addCuboid(26, -54, -22, 16, 16, 16);
-        base.addCuboid(26, -54, -6, 16, 16, 16);
-        base.addCuboid(26, -54, 10, 16, 16, 16);
-        base.addCuboid(26, -54, 26, 16, 16, 16);
-        base.addCuboid(10, -54, 26, 16, 16, 16);
-        base.addCuboid(-6, -54, 26, 16, 16, 16);
-        base.addCuboid(-22, -54, 26, 16, 16, 16);
+        this.leaves.addCuboid(-38, -54, 26, 16, 16, 16);
+        this.leaves.addCuboid(-38, -54, 10, 16, 16, 16);
+        this.leaves.addCuboid(-38, -54, -6, 16, 16, 16);
+        this.leaves.addCuboid(-38, -54, -22, 16, 16, 16);
+        this.leaves.addCuboid(-22, -54, -38, 16, 16, 16);
+        this.leaves.addCuboid(-6, -54, -38, 16, 16, 16);
+        this.leaves.addCuboid(10, -54, -38, 16, 16, 16);
+        this.leaves.addCuboid(26, -54, -38, 16, 16, 16);
+        this.leaves.addCuboid(26, -54, -22, 16, 16, 16);
+        this.leaves.addCuboid(26, -54, -6, 16, 16, 16);
+        this.leaves.addCuboid(26, -54, 10, 16, 16, 16);
+        this.leaves.addCuboid(26, -54, 26, 16, 16, 16);
+        this.leaves.addCuboid(10, -54, 26, 16, 16, 16);
+        this.leaves.addCuboid(-6, -54, 26, 16, 16, 16);
+        this.leaves.addCuboid(-22, -54, 26, 16, 16, 16);
 
         // Fourth
-        base.addCuboid(-22, -38, -22, 16, 16, 16);
-        base.addCuboid(10, -38, 10, 16, 16, 16);
-        base.addCuboid(10, -38, -22, 16, 16, 16);
-        base.addCuboid(-22, -38, 10, 16, 16, 16);
-        base.addCuboid(-22, -38, -6, 16, 16, 16);
-        base.addCuboid(10, -38, -6, 16, 16, 16);
-        base.addCuboid(-6, -38, -22, 16, 16, 16);
-        base.addCuboid(-6, -38, 10, 16, 16, 16);
+        this.leaves.addCuboid(-22, -38, -22, 16, 16, 16);
+        this.leaves.addCuboid(10, -38, 10, 16, 16, 16);
+        this.leaves.addCuboid(10, -38, -22, 16, 16, 16);
+        this.leaves.addCuboid(-22, -38, 10, 16, 16, 16);
+        this.leaves.addCuboid(-22, -38, -6, 16, 16, 16);
+        this.leaves.addCuboid(10, -38, -6, 16, 16, 16);
+        this.leaves.addCuboid(-6, -38, -22, 16, 16, 16);
+        this.leaves.addCuboid(-6, -38, 10, 16, 16, 16);
 
-        base.addCuboid(-38, -38, 10, 16, 16, 16);
-        base.addCuboid(-38, -38, -6, 16, 16, 16);
-        base.addCuboid(-38, -38, -22, 16, 16, 16);
-        base.addCuboid(-38, -38, -38, 16, 16, 16);
-        base.addCuboid(-22, -38, -38, 16, 16, 16);
-        base.addCuboid(-6, -38, -38, 16, 16, 16);
-        base.addCuboid(10, -38, -38, 16, 16, 16);
-        base.addCuboid(26, -38, -38, 16, 16, 16);
-        base.addCuboid(26, -38, -22, 16, 16, 16);
-        base.addCuboid(26, -38, -6, 16, 16, 16);
-        base.addCuboid(26, -38, 10, 16, 16, 16);
-        base.addCuboid(26, -38, 26, 16, 16, 16);
-        base.addCuboid(10, -38, 26, 16, 16, 16);
-        base.addCuboid(-6, -38, 26, 16, 16, 16);
-        base.addCuboid(-22, -38, 26, 16, 16, 16);
+        this.leaves.addCuboid(-38, -38, 10, 16, 16, 16);
+        this.leaves.addCuboid(-38, -38, -6, 16, 16, 16);
+        this.leaves.addCuboid(-38, -38, -22, 16, 16, 16);
+        this.leaves.addCuboid(-38, -38, -38, 16, 16, 16);
+        this.leaves.addCuboid(-22, -38, -38, 16, 16, 16);
+        this.leaves.addCuboid(-6, -38, -38, 16, 16, 16);
+        this.leaves.addCuboid(10, -38, -38, 16, 16, 16);
+        this.leaves.addCuboid(26, -38, -38, 16, 16, 16);
+        this.leaves.addCuboid(26, -38, -22, 16, 16, 16);
+        this.leaves.addCuboid(26, -38, -6, 16, 16, 16);
+        this.leaves.addCuboid(26, -38, 10, 16, 16, 16);
+        this.leaves.addCuboid(26, -38, 26, 16, 16, 16);
+        this.leaves.addCuboid(10, -38, 26, 16, 16, 16);
+        this.leaves.addCuboid(-6, -38, 26, 16, 16, 16);
+        this.leaves.addCuboid(-22, -38, 26, 16, 16, 16);
+
+        base.addChild(this.leaves);
     }
 
     @Override
