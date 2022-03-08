@@ -33,5 +33,13 @@
             "dlang:entity_chan_ambient_five"
         ],
         "subtitle": "dlang:subtitles.entity.chan.ambient.five"
+    },
+    "entity.hurt.among_us":
+    {
+        "category": "neutral",
+        "sounds": [
+            "dlang:among_us"
+        ],
+        "subtitle": "dlang:subtitles.entity.hurt.among_us"
     }
 }

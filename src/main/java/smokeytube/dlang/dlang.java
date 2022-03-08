@@ -2,12 +2,14 @@ package smokeytube.dlang;
 
 import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
 import smokeytube.dlang.entity.CubeEntity;
+import smokeytube.dlang.entity.DripCreeperEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.entity.TreeEntity;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
+import smokeytube.dlang.sounds.HurtSoundEvents;
 import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -120,6 +122,13 @@ public class Dlang implements ModInitializer {
 		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
 	);
 
+	public static final EntityType<DripCreeperEntity> DRIP_CREEPER =
+    Registry.register(
+        Registry.ENTITY_TYPE,
+        new Identifier(MOD_ID, "drip_creeper"),
+        FabricEntityTypeBuilder.create(SpawnGroup.AMBIENT, DripCreeperEntity::new).dimensions(EntityDimensions.fixed(1, 2)).build()
+    );
+
 	// Spawn Eggs
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item HACKER_NAMED_FOUR_CHAN_SPAWN_EGG = new SpawnEggItem(HACKER_NAMED_FOUR_CHAN, 0x4a4a4a, 0x212121, new Item.Settings().group(ItemGroup.MISC));
@@ -203,6 +212,7 @@ public class Dlang implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(HACKER_NAMED_FOUR_CHAN, HackerNamedFourChanEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(TREE, TreeEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(DRIP_CREEPER, DripCreeperEntity.createMobAttributes());
 		
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
@@ -211,6 +221,7 @@ public class Dlang implements ModInitializer {
 
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
+		HurtSoundEvents.register();
 
 		// Status Effects
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"), SPONSORED_BY_RAID_SHADOW_LEGENDS);
