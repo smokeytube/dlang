@@ -42,6 +42,9 @@ public class SpawnInit {
 
         addSpawn(biomeSelector, Dlang.HACKER_NAMED_FOUR_CHAN.getSpawnGroup(), 
             new SpawnSettings.SpawnEntry(Dlang.HACKER_NAMED_FOUR_CHAN, SpawnRate, 2, 4));
+
+        addSpawn(biomeSelector, Dlang.DRIP_CREEPER.getSpawnGroup(),
+            new SpawnSettings.SpawnEntry(Dlang.DRIP_CREEPER, SpawnRate, 2, 4));
     }
 
     public static void init() {

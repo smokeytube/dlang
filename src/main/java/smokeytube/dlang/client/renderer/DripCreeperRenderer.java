@@ -17,5 +17,4 @@ public class DripCreeperRenderer extends MobEntityRenderer<DripCreeperEntity, Cr
     public Identifier getTexture(DripCreeperEntity entity) {
         return new Identifier(Dlang.MOD_ID, "textures/entity/drip_creeper.png");
     }
-
 }

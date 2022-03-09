@@ -37,7 +37,7 @@ public class DripCreeperEntity extends CreeperEntity {
         BlockPos posentity = new BlockPos(this.getX(), this.getY(), this.getZ());
         return view.intersectsEntities(this) && this.world.isNight() && !world.containsFluid(this.getBoundingBox())
         && this.world.getBlockState(posentity).getBlock().canMobSpawnInside()
-        && this.world.getBlockState(blockunderentity).allowsSpawning(view, blockunderentity, Dlang.HACKER_NAMED_FOUR_CHAN)
+        && this.world.getBlockState(blockunderentity).allowsSpawning(view, blockunderentity, Dlang.DRIP_CREEPER)
         && CreeperCanSpawn;
     }
 
