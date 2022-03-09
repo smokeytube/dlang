@@ -1,6 +1,7 @@
 package smokeytube.dlang;
 
 import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
+import smokeytube.dlang.entity.CoronaVirusEntity;
 import smokeytube.dlang.entity.CubeEntity;
 import smokeytube.dlang.entity.DripCreeperEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
@@ -126,12 +127,18 @@ public class Dlang implements ModInitializer {
         new Identifier(MOD_ID, "drip_creeper"),
         FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, DripCreeperEntity::new).dimensions(EntityDimensions.fixed(1, 2)).build()
     );
+	public static final EntityType<CoronaVirusEntity> CORONA_VIRUS = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(MOD_ID, "corona_virus"),
+		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CoronaVirusEntity::new).dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build()
+	);
 
 	// Spawn Eggs
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item HACKER_NAMED_FOUR_CHAN_SPAWN_EGG = new SpawnEggItem(HACKER_NAMED_FOUR_CHAN, 0x4a4a4a, 0x212121, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item TREE_SPAWN_EGG = new SpawnEggItem(TREE, 0x402a09, 0x407822, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item DRIP_CREEPER_SPAWN_EGG = new SpawnEggItem(DRIP_CREEPER, 0x05A704, 0xAF0000, new Item.Settings().group(ItemGroup.MISC));
+	public static final Item CORONA_VIRUS_SPAWN_EGG = new SpawnEggItem(CORONA_VIRUS, 0x386763, 0xAF0000, new Item.Settings().group(ItemGroup.MISC));
 
 	// Status Effects
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
@@ -212,12 +219,14 @@ public class Dlang implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(HACKER_NAMED_FOUR_CHAN, HackerNamedFourChanEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(TREE, TreeEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(DRIP_CREEPER, DripCreeperEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(CORONA_VIRUS, CoronaVirusEntity.createcoronaVirusAttributes());
 
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hacker_named_four_chan_spawn_egg"), HACKER_NAMED_FOUR_CHAN_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tree_spawn_egg"), TREE_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "drip_creeper_spawn_egg"), DRIP_CREEPER_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corona_virus_spawn_egg"), CORONA_VIRUS_SPAWN_EGG);
 
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();

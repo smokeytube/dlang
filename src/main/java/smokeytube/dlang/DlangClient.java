@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import smokeytube.dlang.client.renderer.TreeEntityRenderer;
+import smokeytube.dlang.client.renderer.CoronaVirusEntityRenderer;
 import smokeytube.dlang.client.renderer.CubeEntityRenderer;
 import smokeytube.dlang.client.renderer.DripCreeperRenderer;
 import smokeytube.dlang.client.renderer.HackerNamedFourChanRenderer;
@@ -29,6 +30,9 @@ public class DlangClient implements ClientModInitializer {
 
         EntityRendererRegistry.INSTANCE.register(Dlang.DRIP_CREEPER, (dispatcher, context) -> {
             return new DripCreeperRenderer(dispatcher);
+        });
+        EntityRendererRegistry.INSTANCE.register(Dlang.CORONA_VIRUS, (dispatcher, context) -> {
+            return new CoronaVirusEntityRenderer(dispatcher);
         });
     }
 }
