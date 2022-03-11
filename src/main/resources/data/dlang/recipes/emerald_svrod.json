@@ -7,7 +7,7 @@
 ],
     "key": {
         "#": {
-            "item": "minecraft:emerald_ingot"
+            "item": "dlang:emerald_ingot"
         },
         "|": {
             "item": "minecraft:stick"

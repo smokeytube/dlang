@@ -6,7 +6,10 @@ import smokeytube.dlang.entity.CubeEntity;
 import smokeytube.dlang.entity.DripCreeperEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.entity.TreeEntity;
+import smokeytube.dlang.entity.MishaEntity;
+import smokeytube.dlang.foodcomponent.GlassesFoodComponents;
 import smokeytube.dlang.item.*;
+import smokeytube.dlang.toolmaterial.*;
 import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
@@ -119,7 +122,7 @@ public class Dlang implements ModInitializer {
 	public static final EntityType<TreeEntity> TREE = Registry.register(
 		Registry.ENTITY_TYPE,
 		new Identifier(MOD_ID, "tree"),
-		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build()
 	);
 	public static final EntityType<DripCreeperEntity> DRIP_CREEPER =
     Registry.register(
@@ -131,6 +134,11 @@ public class Dlang implements ModInitializer {
 		Registry.ENTITY_TYPE,
 		new Identifier(MOD_ID, "corona_virus"),
 		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CoronaVirusEntity::new).dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build()
+	);
+	public static final EntityType<MishaEntity> MISHA = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(MOD_ID, "misha"),
+		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, MishaEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
 	);
 
 	// Spawn Eggs
@@ -220,6 +228,7 @@ public class Dlang implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(TREE, TreeEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(DRIP_CREEPER, DripCreeperEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(CORONA_VIRUS, CoronaVirusEntity.createcoronaVirusAttributes());
+		FabricDefaultAttributeRegistry.register(MISHA, MishaEntity.createMobAttributes());
 
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);

@@ -1,4 +1,4 @@
-package smokeytube.dlang;
+package smokeytube.dlang.foodcomponent;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

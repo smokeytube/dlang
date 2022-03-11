@@ -1,4 +1,4 @@
-package smokeytube.dlang;
+package smokeytube.dlang.toolmaterial;
 
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;

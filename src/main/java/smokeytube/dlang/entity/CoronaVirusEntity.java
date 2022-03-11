@@ -24,8 +24,9 @@ public class CoronaVirusEntity extends HostileEntity {
 
     public static DefaultAttributeContainer.Builder createcoronaVirusAttributes() {
         return HostileEntity.createHostileAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 60D)
-            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D)
+            .add(EntityAttributes.GENERIC_ATTACK_SPEED, 10D)
+            .add(EntityAttributes.GENERIC_MAX_HEALTH, 2D)
+            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.55D)
             .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 30.0D)
             .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 0.5D);
     }

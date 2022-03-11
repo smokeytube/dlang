@@ -7,106 +7,92 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
 public class TreeEntityModel extends EntityModel<TreeEntity> {
+    private final ModelPart bb_main;
 
-    private final ModelPart base;
-
-    public ModelPart trunk;
-    public ModelPart leaves;
-
-    // I have no idea how to model
     public TreeEntityModel() {
-        this.textureHeight = 64;
-        this.textureWidth = 64;
-
-        base = new ModelPart(this, 0, 0);
-
-        //Trunk
-        this.trunk = new ModelPart(this, 0, 0);
-        this.trunk.addCuboid(-6, -22, -6, 16, 84, 16);
-        base.addChild(this.trunk);
-
-        //Leaves
-        this.leaves = new ModelPart(this, 0, 0);
-        //Top
-        this.leaves.addCuboid(-6, -86, -6, 16, 16, 16);
-        this.leaves.addCuboid(-22, -86, -6, 16, 16, 16);
-        this.leaves.addCuboid(10, -86, -6, 16, 16, 16);
-        this.leaves.addCuboid(-6, -86, -22, 16, 16, 16);
-        this.leaves.addCuboid(-6, -86, 10, 16, 16, 16);
-        //Second
-        this.leaves.addCuboid(-22, -70, -6, 16, 16, 16);
-        this.leaves.addCuboid(10, -70, -6, 16, 16, 16);
-        this.leaves.addCuboid(-6, -70, -22, 16, 16, 16);
-        this.leaves.addCuboid(-6, -70, 10, 16, 16, 16);
-
-        this.leaves.addCuboid(10, -70, 10, 16, 16, 16);
-        this.leaves.addCuboid(10, -70, -22, 16, 16, 16);
-
-        // Third
-        this.leaves.addCuboid(-22, -54, -22, 16, 16, 16);
-        this.leaves.addCuboid(10, -54, 10, 16, 16, 16);
-        this.leaves.addCuboid(10, -54, -22, 16, 16, 16);
-        this.leaves.addCuboid(-22, -54, 10, 16, 16, 16);
-        this.leaves.addCuboid(-22, -54, -6, 16, 16, 16);
-        this.leaves.addCuboid(10, -54, -6, 16, 16, 16);
-        this.leaves.addCuboid(-6, -54, -22, 16, 16, 16);
-        this.leaves.addCuboid(-6, -54, 10, 16, 16, 16);
-
-        this.leaves.addCuboid(-38, -54, 26, 16, 16, 16);
-        this.leaves.addCuboid(-38, -54, 10, 16, 16, 16);
-        this.leaves.addCuboid(-38, -54, -6, 16, 16, 16);
-        this.leaves.addCuboid(-38, -54, -22, 16, 16, 16);
-        this.leaves.addCuboid(-22, -54, -38, 16, 16, 16);
-        this.leaves.addCuboid(-6, -54, -38, 16, 16, 16);
-        this.leaves.addCuboid(10, -54, -38, 16, 16, 16);
-        this.leaves.addCuboid(26, -54, -38, 16, 16, 16);
-        this.leaves.addCuboid(26, -54, -22, 16, 16, 16);
-        this.leaves.addCuboid(26, -54, -6, 16, 16, 16);
-        this.leaves.addCuboid(26, -54, 10, 16, 16, 16);
-        this.leaves.addCuboid(26, -54, 26, 16, 16, 16);
-        this.leaves.addCuboid(10, -54, 26, 16, 16, 16);
-        this.leaves.addCuboid(-6, -54, 26, 16, 16, 16);
-        this.leaves.addCuboid(-22, -54, 26, 16, 16, 16);
-
-        // Fourth
-        this.leaves.addCuboid(-22, -38, -22, 16, 16, 16);
-        this.leaves.addCuboid(10, -38, 10, 16, 16, 16);
-        this.leaves.addCuboid(10, -38, -22, 16, 16, 16);
-        this.leaves.addCuboid(-22, -38, 10, 16, 16, 16);
-        this.leaves.addCuboid(-22, -38, -6, 16, 16, 16);
-        this.leaves.addCuboid(10, -38, -6, 16, 16, 16);
-        this.leaves.addCuboid(-6, -38, -22, 16, 16, 16);
-        this.leaves.addCuboid(-6, -38, 10, 16, 16, 16);
-
-        this.leaves.addCuboid(-38, -38, 10, 16, 16, 16);
-        this.leaves.addCuboid(-38, -38, -6, 16, 16, 16);
-        this.leaves.addCuboid(-38, -38, -22, 16, 16, 16);
-        this.leaves.addCuboid(-38, -38, -38, 16, 16, 16);
-        this.leaves.addCuboid(-22, -38, -38, 16, 16, 16);
-        this.leaves.addCuboid(-6, -38, -38, 16, 16, 16);
-        this.leaves.addCuboid(10, -38, -38, 16, 16, 16);
-        this.leaves.addCuboid(26, -38, -38, 16, 16, 16);
-        this.leaves.addCuboid(26, -38, -22, 16, 16, 16);
-        this.leaves.addCuboid(26, -38, -6, 16, 16, 16);
-        this.leaves.addCuboid(26, -38, 10, 16, 16, 16);
-        this.leaves.addCuboid(26, -38, 26, 16, 16, 16);
-        this.leaves.addCuboid(10, -38, 26, 16, 16, 16);
-        this.leaves.addCuboid(-6, -38, 26, 16, 16, 16);
-        this.leaves.addCuboid(-22, -38, 26, 16, 16, 16);
-
-        base.addChild(this.leaves);
+        textureWidth = 32;
+        textureHeight = 32;
+        bb_main = new ModelPart(this);
+        bb_main.setPivot(0.0F, 24.0F, 0.0F);
+        bb_main.setTextureOffset(18, 10).addCuboid(-1.0F, -1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(18, 8).addCuboid(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(18, 6).addCuboid(-1.0F, -3.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 18).addCuboid(-1.0F, -4.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(18, 4).addCuboid(-1.0F, -5.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(18, 2).addCuboid(-1.0F, -6.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(18, 0).addCuboid(-1.0F, -6.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 18).addCuboid(0.0F, -6.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 17).addCuboid(-2.0F, -6.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 17).addCuboid(-1.0F, -6.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 17).addCuboid(-1.0F, -5.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 16).addCuboid(0.0F, -5.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 16).addCuboid(-1.0F, -5.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 16).addCuboid(-2.0F, -5.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 15).addCuboid(0.0F, -3.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 13).addCuboid(0.0F, -3.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 11).addCuboid(0.0F, -3.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 9).addCuboid(0.0F, -3.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 15).addCuboid(0.0F, -3.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 7).addCuboid(-1.0F, -3.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 5).addCuboid(-2.0F, -3.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 3).addCuboid(-2.0F, -3.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 15).addCuboid(-2.0F, -3.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(15, 1).addCuboid(-1.0F, -3.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 14).addCuboid(-1.0F, -3.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 14).addCuboid(-2.0F, -3.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 14).addCuboid(1.0F, -3.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 13).addCuboid(1.0F, -3.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 13).addCuboid(1.0F, -3.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 12).addCuboid(1.0F, -3.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 10).addCuboid(-1.0F, -3.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 8).addCuboid(-2.0F, -3.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 6).addCuboid(-3.0F, -3.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 12).addCuboid(-3.0F, -3.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 4).addCuboid(-3.0F, -3.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 2).addCuboid(-3.0F, -3.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(12, 0).addCuboid(-3.0F, -3.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 12).addCuboid(-1.0F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 11).addCuboid(0.0F, -4.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 11).addCuboid(-2.0F, -4.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 10).addCuboid(-1.0F, -4.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 10).addCuboid(0.0F, -4.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 9).addCuboid(0.0F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 7).addCuboid(1.0F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 5).addCuboid(1.0F, -4.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 3).addCuboid(1.0F, -4.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 9).addCuboid(1.0F, -4.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(9, 1).addCuboid(0.0F, -4.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 8).addCuboid(-1.0F, -4.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 8).addCuboid(-2.0F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 7).addCuboid(-2.0F, -4.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 6).addCuboid(-3.0F, -4.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 4).addCuboid(-3.0F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 2).addCuboid(-3.0F, -4.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(6, 0).addCuboid(-2.0F, -4.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 6).addCuboid(-3.0F, -4.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 5).addCuboid(-3.0F, -4.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 4).addCuboid(-2.0F, -4.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 3).addCuboid(-1.0F, -4.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(3, 1).addCuboid(0.0F, -4.0F, 2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 2).addCuboid(-2.0F, -5.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 0).addCuboid(-2.0F, -5.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
     }
 
     @Override
-    public void setAngles(TreeEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    public void setAngles(TreeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }
 
     @Override
-    public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
+    public void render(MatrixStack matrixStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red,
+        float green, float blue, float alpha) {
 
-        matrices.translate(0, 0.875, 0);
+        bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
+    }
 
-        base.render(matrices, vertices, light, overlay);
+    public void setRotationAngle(ModelPart bone, float x, float y, float z) {
+        bone.pitch = x;
+        bone.yaw = y;
+        bone.roll = z;
     }
 
 }

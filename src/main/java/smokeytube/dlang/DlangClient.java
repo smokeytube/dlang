@@ -9,6 +9,7 @@ import smokeytube.dlang.client.renderer.CoronaVirusEntityRenderer;
 import smokeytube.dlang.client.renderer.CubeEntityRenderer;
 import smokeytube.dlang.client.renderer.DripCreeperRenderer;
 import smokeytube.dlang.client.renderer.HackerNamedFourChanRenderer;
+import smokeytube.dlang.client.renderer.MishaEntityRenderer;
 
 @Environment(EnvType.CLIENT)
 public class DlangClient implements ClientModInitializer {
@@ -33,6 +34,9 @@ public class DlangClient implements ClientModInitializer {
         });
         EntityRendererRegistry.INSTANCE.register(Dlang.CORONA_VIRUS, (dispatcher, context) -> {
             return new CoronaVirusEntityRenderer(dispatcher);
+        });
+        EntityRendererRegistry.INSTANCE.register(Dlang.MISHA, (dispatcher, context) -> {
+            return new MishaEntityRenderer(dispatcher);
         });
     }
 }
