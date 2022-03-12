@@ -122,7 +122,7 @@ public class Dlang implements ModInitializer {
 	public static final EntityType<TreeEntity> TREE = Registry.register(
 		Registry.ENTITY_TYPE,
 		new Identifier(MOD_ID, "tree"),
-		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build()
+		FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TreeEntity::new).dimensions(EntityDimensions.fixed(5f, 6f)).build()
 	);
 	public static final EntityType<DripCreeperEntity> DRIP_CREEPER =
     Registry.register(
@@ -228,7 +228,7 @@ public class Dlang implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(TREE, TreeEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(DRIP_CREEPER, DripCreeperEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(CORONA_VIRUS, CoronaVirusEntity.createcoronaVirusAttributes());
-		FabricDefaultAttributeRegistry.register(MISHA, MishaEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(MISHA, MishaEntity.createZombieAttributes());
 
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);

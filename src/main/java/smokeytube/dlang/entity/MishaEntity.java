@@ -1,71 +1,58 @@
 package smokeytube.dlang.entity;
 
-import smokeytube.dlang.Dlang;
-import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
-
 import java.util.Random;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
 
 public class MishaEntity extends ZombieEntity {
-
-    public boolean ZombieCanSpawn = true;
-
-    public MishaEntity(EntityType<? extends ZombieEntity> entityType, World world) {
-        super(entityType, world);
-        this.experiencePoints = 60;
-    }
-
-    public static DefaultAttributeContainer.Builder createskellyAttributes() {
-        return HostileEntity.createHostileAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 60D)
-            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D)
-            .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 30.0D)
-            .add(EntityAttributes.GENERIC_ARMOR, 2D);
-    }
-
-    @Override
-    public boolean canSpawn(WorldView view) {
-        BlockPos blockunderentity = new BlockPos(this.getX(), this.getY() - 1, this.getZ());
-        BlockPos posentity = new BlockPos(this.getX(), this.getY(), this.getZ());
-        return view.intersectsEntities(this) && this.world.isNight() && !world.containsFluid(this.getBoundingBox())
-        && this.world.getBlockState(posentity).getBlock().canMobSpawnInside()
-        && this.world.getBlockState(blockunderentity).allowsSpawning(view, blockunderentity, Dlang.MISHA)
-        && ZombieCanSpawn;
-    }
-
-    @Override
-	protected SoundEvent getAmbientSound() {
-        Random random = new Random();
-		int value = random.nextInt(7);
-        if (value == 0) {
-            return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_TWO;
-        } else if (value == 1) {
-            return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_THREE;
-        } else if (value == 2) {
-            return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_FIVE;
-        } else {
-            return SoundEvents.BLOCK_STONE_STEP;
-        }
+	public MishaEntity(EntityType<? extends MishaEntity> entityType, World world) {
+		super(entityType, world);
 	}
 
-    @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_ONE;
-    }
+	public static boolean canSpawn(EntityType<MishaEntity> type, ServerWorldAccess serverWorldAccess, SpawnReason spawnReason, BlockPos pos, Random random) {
+		return canSpawnInDark(type, serverWorldAccess, spawnReason, pos, random) && (spawnReason == SpawnReason.SPAWNER || serverWorldAccess.isSkyVisible(pos));
+	}
 
-    @Override
-    protected SoundEvent getDeathSound() {
-        return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_FOUR;
-    }
+	protected boolean burnsInDaylight() {
+		return false;
+	}
+
+	protected SoundEvent getAmbientSound() {
+		return SoundEvents.ENTITY_HUSK_AMBIENT;
+	}
+
+	protected SoundEvent getHurtSound(DamageSource source) {
+		return SoundEvents.ENTITY_HUSK_HURT;
+	}
+
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_HUSK_DEATH;
+	}
+
+	protected SoundEvent getStepSound() {
+		return SoundEvents.ENTITY_HUSK_STEP;
+	}
+
+	public boolean tryAttack(Entity target) {
+		boolean bl = super.tryAttack(target);
+		// if (bl && this.getMainHandStack().isEmpty() && target instanceof LivingEntity) {
+		// 	float f = this.world.getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
+		// 	((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 140 * (int)f));
+		// }
+
+		return bl;
+	}
+
+	protected boolean canConvertInWater() {
+		return true;
+	}
 }
