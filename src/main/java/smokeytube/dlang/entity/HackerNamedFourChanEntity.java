@@ -68,8 +68,4 @@ public class HackerNamedFourChanEntity extends SkeletonEntity {
     protected SoundEvent getDeathSound() {
         return HackerNamedFourChanSoundEvents.HACKER_NAMED_FOUR_CHAN_AMBIENT_FOUR;
     }
-
-    SoundEvent getStepSound() {
-		return SoundEvents.BLOCK_STONE_STEP;
-	}
 }

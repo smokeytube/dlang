@@ -41,5 +41,75 @@
             "dlang:among_us"
         ],
         "subtitle": "dlang:subtitles.entity.hurt.among_us"
+    },
+    "entity.misha.ambient.one": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_1"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.one"
+    },
+    "entity.misha.ambient.two": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_2"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.two"
+    },
+    "entity.misha.ambient.three": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_3"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.three"
+    },
+    "entity.misha.ambient.four": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_4"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.four"
+    },
+    "entity.misha.ambient.five": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_5"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.five"
+    },
+    "entity.misha.ambient.six": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_6"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.six"
+    },
+    "entity.misha.ambient.seven": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_7"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.seven"
+    },
+    "entity.misha.ambient.eight": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_ambient_8"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.ambient.eight"
+    },
+    "entity.misha.death": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_death"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.death"
+    },
+    "entity.misha.hurt": {
+        "category": "neutral",
+        "sounds": [
+            "dlang:misha_hurt"
+        ],
+        "subtitle": "dlang:subtitles.entity.misha.hurt"
     }
 }

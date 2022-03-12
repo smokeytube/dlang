@@ -14,6 +14,7 @@ import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
 import smokeytube.dlang.sounds.HurtSoundEvents;
+import smokeytube.dlang.sounds.MishaSoundEvents;
 import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -240,6 +241,7 @@ public class Dlang implements ModInitializer {
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
 		HurtSoundEvents.register();
+		MishaSoundEvents.register();
 
 		// Status Effects
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"), SPONSORED_BY_RAID_SHADOW_LEGENDS);

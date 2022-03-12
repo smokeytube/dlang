@@ -12,6 +12,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import smokeytube.dlang.sounds.MishaSoundEvents;
 
 public class MishaEntity extends ZombieEntity {
 	public MishaEntity(EntityType<? extends MishaEntity> entityType, World world) {
@@ -27,15 +28,26 @@ public class MishaEntity extends ZombieEntity {
 	}
 
 	protected SoundEvent getAmbientSound() {
-		return SoundEvents.ENTITY_HUSK_AMBIENT;
+		SoundEvent mishaArr[] = {
+			MishaSoundEvents.MISHA_AMBIENT_ONE,
+			MishaSoundEvents.MISHA_AMBIENT_TWO,
+			MishaSoundEvents.MISHA_AMBIENT_THREE,
+			MishaSoundEvents.MISHA_AMBIENT_FOUR,
+			MishaSoundEvents.MISHA_AMBIENT_FIVE,
+			MishaSoundEvents.MISHA_AMBIENT_SIX,
+			MishaSoundEvents.MISHA_AMBIENT_SEVEN,
+			MishaSoundEvents.MISHA_AMBIENT_EIGHT
+		};
+		int rnd = new Random().nextInt(mishaArr.length);
+		return mishaArr[rnd];
 	}
 
 	protected SoundEvent getHurtSound(DamageSource source) {
-		return SoundEvents.ENTITY_HUSK_HURT;
+		return MishaSoundEvents.MISHA_HURT;
 	}
 
 	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_HUSK_DEATH;
+		return MishaSoundEvents.MISHA_DEATH;
 	}
 
 	protected SoundEvent getStepSound() {
@@ -53,6 +65,6 @@ public class MishaEntity extends ZombieEntity {
 	}
 
 	protected boolean canConvertInWater() {
-		return true;
+		return false;
 	}
 }
