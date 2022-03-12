@@ -48,6 +48,9 @@ public class SpawnInit {
 
         addSpawn(biomeSelector, Dlang.CORONA_VIRUS.getSpawnGroup(),
             new SpawnSettings.SpawnEntry(Dlang.CORONA_VIRUS, SpawnRate, 3, 30));
+
+        addSpawn(biomeSelector, Dlang.MISHA.getSpawnGroup(),
+            new SpawnSettings.SpawnEntry(Dlang.MISHA, SpawnRate, 2, 4));
     }
 
     public static void init() {

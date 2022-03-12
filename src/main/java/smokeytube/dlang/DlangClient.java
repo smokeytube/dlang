@@ -10,6 +10,7 @@ import smokeytube.dlang.client.renderer.CubeEntityRenderer;
 import smokeytube.dlang.client.renderer.DripCreeperRenderer;
 import smokeytube.dlang.client.renderer.HackerNamedFourChanRenderer;
 import smokeytube.dlang.client.renderer.MishaEntityRenderer;
+import smokeytube.dlang.client.renderer.RaghavEntityRenderer;
 
 @Environment(EnvType.CLIENT)
 public class DlangClient implements ClientModInitializer {
@@ -37,6 +38,9 @@ public class DlangClient implements ClientModInitializer {
         });
         EntityRendererRegistry.INSTANCE.register(Dlang.MISHA, (dispatcher, context) -> {
             return new MishaEntityRenderer(dispatcher);
+        });
+        EntityRendererRegistry.INSTANCE.register(Dlang.RAGHAV, (dispatcher, context) -> {
+            return new RaghavEntityRenderer(dispatcher);
         });
     }
 }

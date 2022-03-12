@@ -14,9 +14,6 @@ public class MishaEntityRenderer extends ZombieEntityRenderer {
     }
 
 	protected void scale(ZombieEntity zombieEntity, MatrixStack matrixStack, float f) {
-		// float g = 1.0625F;
-		// matrixStack.scale(1.0625F, 1.0625F, 1.0625F);
-		// super.scale(zombieEntity, matrixStack, f);
 	}
 
     public Identifier getTexture(ZombieEntity entity) {

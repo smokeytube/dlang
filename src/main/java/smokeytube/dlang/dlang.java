@@ -7,6 +7,7 @@ import smokeytube.dlang.entity.DripCreeperEntity;
 import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.entity.TreeEntity;
 import smokeytube.dlang.entity.MishaEntity;
+import smokeytube.dlang.entity.RaghavEntity;
 import smokeytube.dlang.foodcomponent.GlassesFoodComponents;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.toolmaterial.*;
@@ -141,6 +142,11 @@ public class Dlang implements ModInitializer {
 		new Identifier(MOD_ID, "misha"),
 		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, MishaEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
 	);
+	public static final EntityType<RaghavEntity> RAGHAV = Registry.register(
+		Registry.ENTITY_TYPE,
+		new Identifier(MOD_ID, "raghav"),
+		FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, RaghavEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
+	);
 
 	// Spawn Eggs
 	public static final Item CAT_CUBE_SPAWN_EGG = new SpawnEggItem(CUBE, 0xcd926a, 0x241c15, new Item.Settings().group(ItemGroup.MISC));
@@ -148,6 +154,8 @@ public class Dlang implements ModInitializer {
 	public static final Item TREE_SPAWN_EGG = new SpawnEggItem(TREE, 0x402a09, 0x407822, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item DRIP_CREEPER_SPAWN_EGG = new SpawnEggItem(DRIP_CREEPER, 0x05A704, 0xAF0000, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item CORONA_VIRUS_SPAWN_EGG = new SpawnEggItem(CORONA_VIRUS, 0x386763, 0xAF0000, new Item.Settings().group(ItemGroup.MISC));
+	public static final Item MISHA_SPAWN_EGG = new SpawnEggItem(MISHA, 0xD39E76, 0xD39E76, new Item.Settings().group(ItemGroup.MISC));
+	public static final Item RAGHAV_SPAWN_EGG = new SpawnEggItem(RAGHAV, 0x73614F, 0x73614F, new Item.Settings().group(ItemGroup.MISC));
 
 	// Status Effects
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
@@ -230,6 +238,7 @@ public class Dlang implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(DRIP_CREEPER, DripCreeperEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(CORONA_VIRUS, CoronaVirusEntity.createcoronaVirusAttributes());
 		FabricDefaultAttributeRegistry.register(MISHA, MishaEntity.createZombieAttributes());
+		FabricDefaultAttributeRegistry.register(RAGHAV, RaghavEntity.createIronGolemAttributes());
 
 		// Spawn Eggs
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cat_cube_spawn_egg"), CAT_CUBE_SPAWN_EGG);
@@ -237,6 +246,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tree_spawn_egg"), TREE_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "drip_creeper_spawn_egg"), DRIP_CREEPER_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corona_virus_spawn_egg"), CORONA_VIRUS_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "misha_spawn_egg"), MISHA_SPAWN_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raghav_spawn_egg"), RAGHAV_SPAWN_EGG);
 
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
