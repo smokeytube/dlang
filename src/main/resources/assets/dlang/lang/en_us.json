@@ -5,6 +5,8 @@
     "item.dlang.pringles_can": "Pringles",
     "item.dlang.fortnite_card": "19 Dollar Fortnite Card",
     "item.dlang.glue": "Glue",
+    "item.dlang.while_true": "while(true){}",
+    "item.dlang.fifty_fifty": "Random rd = new Random();Boolean rand = rd.nextBoolean();if (rand) {} else {playerEntity.setHealth(0F);}",
 
     "item.dlang.emerald_pickaxe": "Emerald Pickaxe",
     "item.dlang.emerald_axe": "Emerald Axe",

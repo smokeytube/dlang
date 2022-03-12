@@ -51,6 +51,8 @@ public class Dlang implements ModInitializer {
 	public static final Glasses GLASSES = new Glasses(new Item.Settings().group(ItemGroup.MISC));
 	public static final EmeraldIngot EMERALD_INGOT = new EmeraldIngot(new Item.Settings().group(ItemGroup.MISC));
 	public static final Glue GLUE = new Glue(new Item.Settings().group(ItemGroup.MISC));
+	public static final WhileTrue WHILE_TRUE = new WhileTrue(new Item.Settings().group(ItemGroup.REDSTONE));
+	public static final FiftyFifty FIFTY_FIFTY = new FiftyFifty(new Item.Settings().group(ItemGroup.REDSTONE));
 
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -168,7 +170,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glasses"), GLASSES);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ingot"), EMERALD_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glue"), GLUE);
-
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "while_true"), WHILE_TRUE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fifty_fifty"), FIFTY_FIFTY);
 
 		//Tools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
