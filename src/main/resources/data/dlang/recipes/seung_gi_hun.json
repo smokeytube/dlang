@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##",
+        "! "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:dirt"
+        },
+        "!": {
+            "item": "minecraft:painting"
+        }
+    },
+    "result": {
+        "item": "dlang:seung_gi_hun",
+        "count": 6
+    }
+}
