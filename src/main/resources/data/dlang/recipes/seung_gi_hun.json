@@ -3,13 +3,13 @@
     "pattern": [
         "##",
         "##",
-        "$ "
+        "! "
     ],
     "key": {
         "#": {
             "item": "minecraft:dirt"
         },
-        "$": {
+        "!": {
             "item": "minecraft:painting"
         }
     },
