@@ -11,8 +11,8 @@ import smokeytube.dlang.entity.RaghavEntity;
 import smokeytube.dlang.foodcomponent.GlassesFoodComponents;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.toolmaterial.*;
-import smokeytube.dlang.item.EmeraldTools.*;
 import smokeytube.dlang.item.Ools.*;
+import smokeytube.dlang.item.Tools.*;
 import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
 import smokeytube.dlang.sounds.HurtSoundEvents;
 import smokeytube.dlang.sounds.MishaSoundEvents;
@@ -57,9 +57,16 @@ public class Dlang implements ModInitializer {
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_AXE = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_PICKAXE = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_HOE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_AXE = new AxeToolItem(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_PICKAXE = new PickaxeToolItem(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_HOE = new HoeToolItem(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
+
+	public static final ToolItem GLASS_SWORD = new SwordItem(GlassToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem GLASS_SHOVEL = new ShovelItem(GlassToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_AXE = new AxeToolItem(GlassToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_PICKAXE = new PickaxeToolItem(GlassToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_HOE = new HoeToolItem(GlassToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
+
 
 	// Wooden ools
 	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -100,9 +107,9 @@ public class Dlang implements ModInitializer {
 	// Emerald ools
 	public static final ToolItem EMERALD_SVROD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem EMERALD_SHVL = new ShovelItem(EmeraldToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_KAEX = new EmeraldAxe(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_ICKPAEX = new EmeraldPickaxe(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem EMERALD_OHE = new EmeraldHoe(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_KAEX = new AxeToolItem(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_ICKPAEX = new PickaxeToolItem(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem EMERALD_OHE = new HoeToolItem(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
@@ -179,6 +186,12 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_axe"), EMERALD_AXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_pickaxe"), EMERALD_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_hoe"), EMERALD_HOE);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_sword"), GLASS_SWORD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_shovel"), GLASS_SHOVEL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_axe"), GLASS_AXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_pickaxe"), GLASS_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_hoe"), GLASS_HOE);
 
 		// Wooden Ools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_svrod"), WOODEN_SVROD);

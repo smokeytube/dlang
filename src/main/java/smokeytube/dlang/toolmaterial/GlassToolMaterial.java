@@ -3,25 +3,24 @@ package smokeytube.dlang.toolmaterial;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import smokeytube.dlang.Dlang;
 
-public class EmeraldToolMaterial implements ToolMaterial {
+public class GlassToolMaterial implements ToolMaterial {
 
-    public static final EmeraldToolMaterial INSTANCE = new EmeraldToolMaterial();
+    public static final GlassToolMaterial INSTANCE = new GlassToolMaterial();
 
     @Override
     public int getDurability() {
-        return 1200;
+        return 1;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8F;
+        return 4F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 7.0F;
+        return 10.0F;
     }
 
     @Override
@@ -31,12 +30,12 @@ public class EmeraldToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 25;
+        return Integer.MAX_VALUE;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.EMERALD, Dlang.EMERALD_INGOT);
+        return Ingredient.ofItems(Items.GLASS);
     }
 
 }
