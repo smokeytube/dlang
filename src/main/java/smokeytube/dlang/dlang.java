@@ -8,7 +8,7 @@ import smokeytube.dlang.entity.HackerNamedFourChanEntity;
 import smokeytube.dlang.entity.TreeEntity;
 import smokeytube.dlang.entity.MishaEntity;
 import smokeytube.dlang.entity.RaghavEntity;
-import smokeytube.dlang.foodcomponent.GlassesFoodComponents;
+import smokeytube.dlang.foodcomponent.*;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.toolmaterial.*;
 import smokeytube.dlang.item.Ools.*;
@@ -113,6 +113,8 @@ public class Dlang implements ModInitializer {
 
 	// Food
 	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
+	public static final RawSpaghetti RAW_SPAGHETTI = new RawSpaghetti(new Item.Settings().group(ItemGroup.FOOD).food(RawSpaghettiFoodComponents.RAW_SPAGHETTI));
+	public static final CookedSpaghetti COOKED_SPAGHETTI = new CookedSpaghetti(new Item.Settings().group(ItemGroup.FOOD).food(CookedSpaghettiFoodComponents.COOKED_SPAGHETTI));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
@@ -238,6 +240,8 @@ public class Dlang implements ModInitializer {
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_glasses"), COOKED_GLASSES);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_spaghetti"), RAW_SPAGHETTI);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_spaghetti"), COOKED_SPAGHETTI);
 
 		// Blocks and their respective items
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);

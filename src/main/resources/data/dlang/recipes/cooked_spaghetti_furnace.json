@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "dlang:raw_spaghetti"
+    },
+    "result": "dlang:cooked_spaghetti",
+    "experience": 1,
+    "cookingtime": 200
+}
