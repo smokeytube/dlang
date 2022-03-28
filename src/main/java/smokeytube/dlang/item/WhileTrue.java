@@ -13,6 +13,7 @@ public class WhileTrue extends Item{
     }
 
     @Override
+    @SuppressWarnings("unused")
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         while (true) {
             // Have to add this to compile

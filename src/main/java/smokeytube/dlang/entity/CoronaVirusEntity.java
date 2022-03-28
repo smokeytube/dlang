@@ -38,6 +38,6 @@ public class CoronaVirusEntity extends HostileEntity {
         this.goalSelector.add(2, new LookAroundGoal(this));
         this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(4, new EscapeDangerGoal(this, 1.25D));
-		this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, true));
+		this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, true));
 	}
 }

@@ -14,9 +14,9 @@ public class TreeEntity extends PathAwareEntity {
         super(entityType, world);
     }
 	protected void initGoals() {
-		// this.goalSelector.add(0, new WanderAroundFarGoal(this, 1.0D));
-        // this.goalSelector.add(1, new LookAroundGoal(this));
-        // this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        // this.goalSelector.add(3, new EscapeDangerGoal(this, 1.25D));
+		this.goalSelector.add(0, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(1, new LookAroundGoal(this));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(3, new EscapeDangerGoal(this, 1.25D));
 	}
 }

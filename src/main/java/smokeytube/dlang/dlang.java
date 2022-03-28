@@ -13,6 +13,7 @@ import smokeytube.dlang.item.*;
 import smokeytube.dlang.toolmaterial.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.item.Tools.*;
+import smokeytube.dlang.item.generic.GenericItem;
 import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
 import smokeytube.dlang.sounds.HurtSoundEvents;
 import smokeytube.dlang.sounds.MishaSoundEvents;
@@ -47,12 +48,13 @@ public class Dlang implements ModInitializer {
 
 	// Items
 	public static final PringlesCan PRINGLES_CAN = new PringlesCan(new Item.Settings().group(ItemGroup.MISC));
-	public static final FortniteCard FORTNITE_CARD = new FortniteCard(new Item.Settings().group(ItemGroup.MISC));
-	public static final Glasses GLASSES = new Glasses(new Item.Settings().group(ItemGroup.MISC));
-	public static final EmeraldIngot EMERALD_INGOT = new EmeraldIngot(new Item.Settings().group(ItemGroup.MISC));
+	public static final GenericItem FORTNITE_CARD = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
+	public static final GenericItem GLASSES = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
+	public static final GenericItem EMERALD_INGOT = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
 	public static final Glue GLUE = new Glue(new Item.Settings().group(ItemGroup.MISC));
 	public static final WhileTrue WHILE_TRUE = new WhileTrue(new Item.Settings().group(ItemGroup.REDSTONE));
 	public static final FiftyFifty FIFTY_FIFTY = new FiftyFifty(new Item.Settings().group(ItemGroup.REDSTONE));
+	public static final GenericItem KYLE_RITTENHOUSE = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
 
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -67,6 +69,7 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem GLASS_PICKAXE = new PickaxeToolItem(GlassToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem GLASS_HOE = new HoeToolItem(GlassToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
+	public static final ToolItem PAN = new SwordItem(ToolMaterials.IRON, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
 
 	// Wooden ools
 	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -112,9 +115,9 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem EMERALD_OHE = new HoeToolItem(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
-	public static final CookedGlasses COOKED_GLASSES = new CookedGlasses(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
-	public static final RawSpaghetti RAW_SPAGHETTI = new RawSpaghetti(new Item.Settings().group(ItemGroup.FOOD).food(RawSpaghettiFoodComponents.RAW_SPAGHETTI));
-	public static final CookedSpaghetti COOKED_SPAGHETTI = new CookedSpaghetti(new Item.Settings().group(ItemGroup.FOOD).food(CookedSpaghettiFoodComponents.COOKED_SPAGHETTI));
+	public static final GenericItem COOKED_GLASSES = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
+	public static final GenericItem RAW_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(RawSpaghettiFoodComponents.RAW_SPAGHETTI));
+	public static final GenericItem COOKED_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(CookedSpaghettiFoodComponents.COOKED_SPAGHETTI));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
@@ -183,6 +186,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glue"), GLUE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "while_true"), WHILE_TRUE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fifty_fifty"), FIFTY_FIFTY);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kyle_rittenhouse"), KYLE_RITTENHOUSE);
 
 		//Tools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
@@ -196,6 +200,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_axe"), GLASS_AXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_pickaxe"), GLASS_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_hoe"), GLASS_HOE);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pan"), PAN);
 
 		// Wooden Ools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_svrod"), WOODEN_SVROD);

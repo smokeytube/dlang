@@ -1,0 +1,9 @@
+
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "dlang:item/pan",
+        "layer1": "dlang:item/pan_back"
+    }
+}
+        

@@ -9,6 +9,9 @@
     "item.dlang.fifty_fifty": "Random rd = new Random();Boolean rand = rd.nextBoolean();if (rand) {} else {playerEntity.setHealth(0F);}",
     "item.dlang.raw_spaghetti": "Raw Spaghetti",
     "item.dlang.cooked_spaghetti": "Cooked Spaghetti",
+    "item.dlang.kyle_rittenhouse": "Kyle Rittenhouse",
+
+    "item.dlang.pan": "Pan",
 
     "item.dlang.emerald_pickaxe": "Emerald Pickaxe",
     "item.dlang.emerald_axe": "Emerald Axe",

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#|#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "|": {
+            "item": "dlang:glue"
+        }
+    },
+    "result": {
+        "item": "dlang:fortnite_card"
+    }
+}
