@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 public class SeungGiHun extends Block {
 
     public static final IntProperty PROPERTY = IntProperty.of("model_value", 0, 1024);
-    public static Identifier ID = new Identifier("testblockmod", "test_block");
+    public static Identifier ID = new Identifier("dlang", "seung_gi_hun");
 
     public SeungGiHun() {
         super(FabricBlockSettings.copyOf(Blocks.BEDROCK));
@@ -40,12 +40,12 @@ public class SeungGiHun extends Block {
                 value = value - 1;
                 world.setBlockState(pos, state.with(PROPERTY, value));
                 player.playSound(SoundEvents.UI_BUTTON_CLICK, 1.0F, 0.5F);
-                player.sendMessage(new TranslatableText("message.testblockmod.state_minus", value), true);
+                player.sendMessage(new TranslatableText("message.dlang.state_minus", value), true);
             } else {
                 value = value + 1;
                 world.setBlockState(pos, state.with(PROPERTY, value));
                 player.playSound(SoundEvents.UI_BUTTON_CLICK, 1.0F, 1.0F);
-                player.sendMessage(new TranslatableText("message.testblockmod.state_plus", value), true);
+                player.sendMessage(new TranslatableText("message.dlang.state_plus", value), true);
             }
         }
         return ActionResult.SUCCESS;

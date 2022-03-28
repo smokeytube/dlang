@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "dlang:raw_spaghetti_block"
+        }
+    ],
+    "result": {
+        "item": "dlang:raw_spaghetti",
+        "count": 9
+    }
+}

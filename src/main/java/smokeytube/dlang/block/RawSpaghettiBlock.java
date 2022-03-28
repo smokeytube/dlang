@@ -16,13 +16,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class RawBeefBlock extends Block {
+public class RawSpaghettiBlock extends Block {
 
     public static final IntProperty PROPERTY = IntProperty.of("model_value", 0, 1024);
-    public static Identifier ID = new Identifier("dlang", "raw_beef_block");
+    public static Identifier ID = new Identifier("dlang", "raw_spaghetti_block");
 
-    public RawBeefBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.NETHER_WART_BLOCK));
+    public RawSpaghettiBlock() {
+        super(FabricBlockSettings.copyOf(Blocks.FIRE_CORAL_BLOCK));
         setDefaultState(getStateManager().getDefaultState().with(PROPERTY, 0));
     }
 

@@ -118,8 +118,10 @@ public class Dlang implements ModInitializer {
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
-	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(5.0F, 5.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
+	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(2.0F, 2.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
 	public static final Block OCTA_PLANK = new Block(FabricBlockSettings.of(Material.WOOD).strength(15.0F, 15.0F).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
+	public static final Block RAW_SPAGHETTI_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
+	public static final Block COOKED_SPAGHETTI_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
 
 	// Entity
 	public static final EntityType<CubeEntity> CUBE = Registry.register(
@@ -250,6 +252,10 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_beef_block"), new BlockItem(RAW_BEEF_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "octa_plank"), OCTA_PLANK);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "octa_plank"), new BlockItem(OCTA_PLANK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "raw_spaghetti_block"), RAW_SPAGHETTI_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_spaghetti_block"), new BlockItem(RAW_SPAGHETTI_BLOCK, new Item.Settings().group(ItemGroup.FOOD)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cooked_spaghetti_block"), COOKED_SPAGHETTI_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_spaghetti_block"), new BlockItem(COOKED_SPAGHETTI_BLOCK, new Item.Settings().group(ItemGroup.FOOD)));
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());

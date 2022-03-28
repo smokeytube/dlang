@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "dlang:block/cooked_spaghetti_block"
+        }
+    }
+}
