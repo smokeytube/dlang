@@ -1,5 +1,6 @@
 package smokeytube.dlang;
 
+import smokeytube.dlang.armor.*;
 import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
 import smokeytube.dlang.entity.CoronaVirusEntity;
 import smokeytube.dlang.entity.CubeEntity;
@@ -27,8 +28,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
@@ -70,6 +73,17 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem GLASS_HOE = new HoeToolItem(GlassToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	public static final ToolItem PAN = new SwordItem(ToolMaterials.IRON, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+
+	// Armor
+	public static final Item WOOD_HELMET = new ArmorItem(WoodArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item WOOD_CHESTPLATE = new ArmorItem(WoodArmorMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item WOOD_LEGGINGS = new ArmorItem(WoodArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item WOOD_BOOTS = new ArmorItem(WoodArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
+
+	public static final Item STONE_HELMET = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item STONE_CHESTPLATE = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item STONE_LEGGINGS = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item STONE_BOOTS = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
 
 	// Wooden ools
 	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -202,6 +216,17 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_hoe"), GLASS_HOE);
 
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pan"), PAN);
+
+		// Armor
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wood_helmet"), WOOD_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wood_chestplate"), WOOD_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wood_leggings"), WOOD_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wood_boots"), WOOD_BOOTS);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_helmet"), STONE_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_chestplate"), STONE_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_leggings"), STONE_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_boots"), STONE_BOOTS);
 
 		// Wooden Ools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_svrod"), WOODEN_SVROD);

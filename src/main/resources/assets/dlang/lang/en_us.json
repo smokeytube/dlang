@@ -13,6 +13,16 @@
 
     "item.dlang.pan": "Pan",
 
+    "item.dlang.wood_helmet": "Wooden Helmet",
+    "item.dlang.wood_chestplate": "Wooden Chestplate",
+    "item.dlang.wood_leggings": "Wooden Leggings",
+    "item.dlang.wood_boots": "Wooden Boots",
+
+    "item.dlang.stone_helmet": "Stone Helmet",
+    "item.dlang.stone_chestplate": "Stone Chestplate",
+    "item.dlang.stone_leggings": "Stone Leggings",
+    "item.dlang.stone_boots": "Stone Boots",
+
     "item.dlang.emerald_pickaxe": "Emerald Pickaxe",
     "item.dlang.emerald_axe": "Emerald Axe",
     "item.dlang.emerald_hoe": "Emerald Hoe",
