@@ -85,6 +85,16 @@ public class Dlang implements ModInitializer {
     public static final Item STONE_LEGGINGS = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
     public static final Item STONE_BOOTS = new ArmorItem(StoneArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
 
+	public static final Item GLASS_HELMET = new ArmorItem(GlassArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item GLASS_CHESTPLATE = new ArmorItem(GlassArmorMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item GLASS_LEGGINGS = new ArmorItem(GlassArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item GLASS_BOOTS = new ArmorItem(GlassArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
+
+	public static final Item EMERALD_HELMET = new ArmorItem(EmeraldArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item EMERALD_CHESTPLATE = new ArmorItem(EmeraldArmorMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item EMERALD_LEGGINGS = new ArmorItem(EmeraldArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item EMERALD_BOOTS = new ArmorItem(EmeraldArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
+
 	// Wooden ools
 	public static final ToolItem WOODEN_SVROD = new SwordItem(ToolMaterials.WOOD, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem WOODEN_SHVL = new ShovelItem(ToolMaterials.WOOD, 1F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
@@ -227,6 +237,16 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_chestplate"), STONE_CHESTPLATE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_leggings"), STONE_LEGGINGS);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_boots"), STONE_BOOTS);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_helmet"), GLASS_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_chestplate"), GLASS_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_leggings"), GLASS_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_boots"), GLASS_BOOTS);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_helmet"), EMERALD_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_chestplate"), EMERALD_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_leggings"), EMERALD_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_boots"), EMERALD_BOOTS);
 
 		// Wooden Ools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wooden_svrod"), WOODEN_SVROD);
