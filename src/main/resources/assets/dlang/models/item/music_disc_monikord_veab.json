@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "dlang:item/music_disc_monikord_veab"
+    }
+}

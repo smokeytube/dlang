@@ -111,5 +111,47 @@
             "dlang:misha_hurt"
         ],
         "subtitle": "dlang:subtitles.entity.misha.hurt"
+    },
+    "music_disc.politruk": {
+        "category": "music",
+        "sounds": [
+            "dlang:politruk"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.politruk"
+    },
+    "music_disc.meie_maast_ida_pool": {
+        "category": "music",
+        "sounds": [
+            "dlang:meie_maast_ida_pool"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.meie_maast_ida_pool"
+    },
+    "music_disc.orn_haare": {
+        "category": "music",
+        "sounds": [
+            "dlang:orn_haare"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.orn_haare"
+    },
+    "music_disc.vanapoisi_reilender": {
+        "category": "music",
+        "sounds": [
+            "dlang:vanapoisi_reilender"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.vanapoisi_reilender"
+    },
+    "music_disc.music_disc.kui_mina": {
+        "category": "music",
+        "sounds": [
+            "dlang:music_disc.kui_mina"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.music_disc.kui_mina"
+    },
+    "music_disc.monikord_veab": {
+        "category": "music",
+        "sounds": [
+            "dlang:monikord_veab"
+        ],
+        "subtitle": "dlang:subtitles.music_disc.monikord_veab"
     }
 }

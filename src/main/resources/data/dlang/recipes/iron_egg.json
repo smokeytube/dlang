@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#6#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "6": {
+            "item": "minecraft:egg"
+        }
+    },
+    "result": {
+        "item": "dlang:iron_egg"
+    }
+}

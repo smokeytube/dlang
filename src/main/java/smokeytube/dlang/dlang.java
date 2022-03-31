@@ -15,9 +15,9 @@ import smokeytube.dlang.toolmaterial.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.item.Tools.*;
 import smokeytube.dlang.item.generic.GenericItem;
-import smokeytube.dlang.sounds.HackerNamedFourChanSoundEvents;
-import smokeytube.dlang.sounds.HurtSoundEvents;
-import smokeytube.dlang.sounds.MishaSoundEvents;
+import smokeytube.dlang.item.other.DlangMusicDiscItem;
+import smokeytube.dlang.item.other.IronEgg;
+import smokeytube.dlang.sounds.*;
 import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -43,6 +43,7 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.Rarity;
 
 // трол
 @SuppressWarnings("nullPointerException")
@@ -58,6 +59,7 @@ public class Dlang implements ModInitializer {
 	public static final WhileTrue WHILE_TRUE = new WhileTrue(new Item.Settings().group(ItemGroup.REDSTONE));
 	public static final FiftyFifty FIFTY_FIFTY = new FiftyFifty(new Item.Settings().group(ItemGroup.REDSTONE));
 	public static final GenericItem KYLE_RITTENHOUSE = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
+	public static final IronEgg IRON_EGG = new IronEgg(new Item.Settings().group(ItemGroup.MISC));
 
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -137,11 +139,18 @@ public class Dlang implements ModInitializer {
 	public static final ToolItem EMERALD_KAEX = new AxeToolItem(EmeraldToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem EMERALD_ICKPAEX = new PickaxeToolItem(EmeraldToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
 	public static final ToolItem EMERALD_OHE = new HoeToolItem(EmeraldToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
+	// Glass ools
+	public static final ToolItem GLASS_SVROD = new SwordItem(GlassToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
+	public static final ToolItem GLASS_SHVL = new ShovelItem(GlassToolMaterial.INSTANCE, -2.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_KAEX = new OolKaex(GlassToolMaterial.INSTANCE, 2, -3F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_ICKPAEX = new OolIckPaex(GlassToolMaterial.INSTANCE, -2, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ToolItem GLASS_OHE = new OolOhe(GlassToolMaterial.INSTANCE, -6, 0, new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Food
 	public static final GenericItem COOKED_GLASSES = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(GlassesFoodComponents.COOKED_GLASSES));
 	public static final GenericItem RAW_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(RawSpaghettiFoodComponents.RAW_SPAGHETTI));
 	public static final GenericItem COOKED_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(CookedSpaghettiFoodComponents.COOKED_SPAGHETTI));
+	public static final GenericItem PELMENI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(PelmeniFoodComponents.PELMENI));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
@@ -197,6 +206,16 @@ public class Dlang implements ModInitializer {
 	public static final Item MISHA_SPAWN_EGG = new SpawnEggItem(MISHA, 0xD39E76, 0xD39E76, new Item.Settings().group(ItemGroup.MISC));
 	public static final Item RAGHAV_SPAWN_EGG = new SpawnEggItem(RAGHAV, 0x73614F, 0x73614F, new Item.Settings().group(ItemGroup.MISC));
 
+	// Music discs
+	private static final Item.Settings MUSIC_DISC_SETTINGS = new Item.Settings().maxCount(1).group(ItemGroup.MISC).rarity(Rarity.RARE);
+
+	public static final DlangMusicDiscItem POLITRUK = new DlangMusicDiscItem(13, MusicDiscSoundEvents.POLITRUK, MUSIC_DISC_SETTINGS);
+	public static final DlangMusicDiscItem MEIE_MAAST_IDA_POOL = new DlangMusicDiscItem(14, MusicDiscSoundEvents.MEIE_MAAST_IDA_POOL, MUSIC_DISC_SETTINGS);
+	public static final DlangMusicDiscItem ORN_HAARE = new DlangMusicDiscItem(15, MusicDiscSoundEvents.ORN_HAARE, MUSIC_DISC_SETTINGS);
+	public static final DlangMusicDiscItem VANAPOISI_REILENDER = new DlangMusicDiscItem(16, MusicDiscSoundEvents.VANAPOISI_REILENDER, MUSIC_DISC_SETTINGS);
+	public static final DlangMusicDiscItem KUI_MINA = new DlangMusicDiscItem(17, MusicDiscSoundEvents.KUI_MINA, MUSIC_DISC_SETTINGS);
+	public static final DlangMusicDiscItem MONIKORD_VEAB = new DlangMusicDiscItem(18, MusicDiscSoundEvents.MONIKORD_VEAB, MUSIC_DISC_SETTINGS);
+
 	// Status Effects
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
 
@@ -211,6 +230,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "while_true"), WHILE_TRUE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fifty_fifty"), FIFTY_FIFTY);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kyle_rittenhouse"), KYLE_RITTENHOUSE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_egg"), IRON_EGG);
 
 		//Tools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
@@ -290,11 +310,18 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_kaex"), EMERALD_KAEX);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ohe"), EMERALD_OHE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_ickpaex"), EMERALD_ICKPAEX);
+		// Glass Ools
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_svrod"), GLASS_SVROD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_shvl"), GLASS_SHVL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_kaex"), GLASS_KAEX);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_ohe"), GLASS_OHE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_ickpaex"), GLASS_ICKPAEX);
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_glasses"), COOKED_GLASSES);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_spaghetti"), RAW_SPAGHETTI);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_spaghetti"), COOKED_SPAGHETTI);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pelmeni"), PELMENI);
 
 		// Blocks and their respective items
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);
@@ -326,10 +353,19 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "misha_spawn_egg"), MISHA_SPAWN_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raghav_spawn_egg"), RAGHAV_SPAWN_EGG);
 
+		// Music Discs
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_politruk"), POLITRUK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_meie_maast_ida_pool"), MEIE_MAAST_IDA_POOL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_orn_haare"), ORN_HAARE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_vanapoisi_reilender"), VANAPOISI_REILENDER);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_kui_mina"), KUI_MINA);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "music_disc_monikord_veab"), MONIKORD_VEAB);
+
 		// Sounds
 		HackerNamedFourChanSoundEvents.register();
 		HurtSoundEvents.register();
 		MishaSoundEvents.register();
+		MusicDiscSoundEvents.register();
 
 		// Status Effects
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"), SPONSORED_BY_RAID_SHADOW_LEGENDS);

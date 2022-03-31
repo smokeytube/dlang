@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " * ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        },
+        "*": {
+            "item": "minecraft:cooked_porkchop"
+        }
+    },
+    "result": {
+        "item": "dlang:pelmeni",
+        "count": 9
+    }
+}
