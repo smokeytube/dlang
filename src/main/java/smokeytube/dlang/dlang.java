@@ -1,22 +1,15 @@
 package smokeytube.dlang;
 
 import smokeytube.dlang.armor.*;
-import smokeytube.dlang.effects.SponsoredByRaidShadowLegendsStatusEffect;
-import smokeytube.dlang.entity.CoronaVirusEntity;
-import smokeytube.dlang.entity.CubeEntity;
-import smokeytube.dlang.entity.DripCreeperEntity;
-import smokeytube.dlang.entity.HackerNamedFourChanEntity;
-import smokeytube.dlang.entity.TreeEntity;
-import smokeytube.dlang.entity.MishaEntity;
-import smokeytube.dlang.entity.RaghavEntity;
+import smokeytube.dlang.effects.*;
+import smokeytube.dlang.entity.*;
 import smokeytube.dlang.foodcomponent.*;
 import smokeytube.dlang.item.*;
 import smokeytube.dlang.toolmaterial.*;
 import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.item.Tools.*;
 import smokeytube.dlang.item.generic.GenericItem;
-import smokeytube.dlang.item.other.DlangMusicDiscItem;
-import smokeytube.dlang.item.other.IronEgg;
+import smokeytube.dlang.item.other.*;
 import smokeytube.dlang.sounds.*;
 import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
@@ -60,6 +53,7 @@ public class Dlang implements ModInitializer {
 	public static final FiftyFifty FIFTY_FIFTY = new FiftyFifty(new Item.Settings().group(ItemGroup.REDSTONE));
 	public static final GenericItem KYLE_RITTENHOUSE = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
 	public static final IronEgg IRON_EGG = new IronEgg(new Item.Settings().group(ItemGroup.MISC));
+	public static final WitherMeal WITHER_MEAL = new WitherMeal(new Item.Settings().group(ItemGroup.MISC));
 
 	//Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
@@ -231,6 +225,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fifty_fifty"), FIFTY_FIFTY);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kyle_rittenhouse"), KYLE_RITTENHOUSE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_egg"), IRON_EGG);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wither_meal"), WITHER_MEAL);
 
 		//Tools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
