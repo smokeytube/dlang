@@ -132,9 +132,26 @@
     "item.dlang.music_disc_kui_mina": "Kui mina ükskord noores eas, võtsin vana naise",
     "item.dlang.music_disc_kui_mina.desc": "Lõõtsavägilased - Kui mina ükskord noores eas, võtsin vana naise",
     "item.dlang.music_disc_monikord_veab": "Mõnikord Veab",
-    "item.dlang.music_disc_monikord_veab.desc": "Juhan Uppin - Mõnikord Veab"
+    "item.dlang.music_disc_monikord_veab.desc": "Juhan Uppin - Mõnikord Veab",
 
 
 
 
+
+    "death.attack.cramming": "%1$s attended a Travis Scott concert",
+    "deathScreen.title": "You dead foo!",
+    "deathScreen.score": "Xbox Gamer Points",
+
+    "enchantment.level.1": "Один",
+    "enchantment.level.2": "Два",
+    "enchantment.level.3": "Три",
+    "enchantment.level.4": "Четыре",
+    "enchantment.level.5": "Пять",
+    "enchantment.level.6": "Шесть",
+    "enchantment.level.7": "Семь",
+    "enchantment.level.8": "Восемь",
+    "enchantment.level.9": "Девять",
+    "enchantment.level.10": "Десять",
+
+    "item.minecraft.bee_spawn_egg": "Жужжала Spawn Egg"
 }
