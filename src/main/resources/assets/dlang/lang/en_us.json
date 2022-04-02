@@ -153,5 +153,6 @@
     "enchantment.level.9": "Девять",
     "enchantment.level.10": "Десять",
 
-    "item.minecraft.bee_spawn_egg": "Жужжала Spawn Egg"
+    "item.minecraft.bee_spawn_egg": "Жужжала Spawn Egg",
+    "entity.minecraft.bee": "Жужжала"
 }
