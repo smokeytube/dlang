@@ -1,31 +1,31 @@
 {
     "parent": "minecraft:story/smelt_iron",
     "display": {
-      "icon": {
-        "item": "dlang:iron_ickpaex"
-      },
-      "title": "Inst T Irorn Ick",
-      "description": "Yupgraed yo ickpaex",
-      "frame": "task",
-      "show_toast": true,
-      "announce_to_chat": true,
-      "hidden": false
+        "icon": {
+            "item": "dlang:iron_ickpaex"
+        },
+        "title": "Inst T Irorn Ick",
+        "description": "Yupgraed yo ickpaex",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
     },
     "criteria": {
-      "iron_ickpaex": {
-        "trigger": "minecraft:inventory_changed",
-        "conditions": {
-          "items": [
-            {
-              "item": "dlang:iron_ickpaex"
+        "iron_ickpaex": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "dlang:iron_ickpaex"
+                    }
+                ]
             }
-          ]
         }
-      }
     },
     "requirements": [
-      [
-        "iron_ickpaex"
-      ]
+        [
+            "iron_ickpaex"
+        ]
     ]
-  }
+}
