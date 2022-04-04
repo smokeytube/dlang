@@ -34,8 +34,7 @@
         ],
         "subtitle": "dlang:subtitles.entity.chan.ambient.five"
     },
-    "entity.hurt.among_us":
-    {
+    "entity.hurt.among_us": {
         "category": "neutral",
         "sounds": [
             "dlang:among_us"
