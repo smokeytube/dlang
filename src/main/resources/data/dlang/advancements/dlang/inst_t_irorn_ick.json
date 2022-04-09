@@ -15,11 +15,9 @@
         "iron_ickpaex": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "items": [
-                    {
-                        "item": "dlang:iron_ickpaex"
-                    }
-                ]
+                "items": [{
+                    "item": "dlang:iron_ickpaex"
+                }]
             }
         }
     },
