@@ -17,7 +17,7 @@ public class IronEggEntity extends EggEntity {
     @Override
 	protected void onEntityHit(EntityHitResult entityHitResult) {
 		super.onEntityHit(entityHitResult);
-		entityHitResult.getEntity().damage(DamageSource.thrownProjectile(this, this.getOwner()), 3.0F);
+		entityHitResult.getEntity().damage(DamageSource.thrownProjectile(this, this.getOwner()), 10.0F);
 	}
 
     @Override

@@ -7,10 +7,10 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:rotten_flesh"
+            "item": "dlang:flesh"
         },
         "*": {
-            "item": "minecraft:poisonous_potato"
+            "item": "minecraft:bow"
         }
     },
     "result": {

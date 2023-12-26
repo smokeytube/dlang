@@ -9,10 +9,12 @@
     "item.dlang.fifty_fifty": "Random rd = new Random();Boolean rand = rd.nextBoolean();if (rand) {} else {playerEntity.setHealth(0F);}",
     "item.dlang.raw_spaghetti": "Raw Spaghetti",
     "item.dlang.cooked_spaghetti": "Cooked Spaghetti",
+    "item.dlang.flesh": "Flesh",
+    "item.dlang.cooked_flesh": "Cooked Flesh",
     "item.dlang.kyle_rittenhouse": "Kyle Rittenhouse",
     "item.dlang.pelmeni": "Пельмени",
     "item.dlang.iron_egg": "Iron Egg",
-    "item.dlang.iron_egg.desc": "3 damage",
+    "item.dlang.iron_egg.desc": "10 damage",
     "item.dlang.wither_meal": "Wither Meal",
 
     "item.dlang.pan": "Pan",

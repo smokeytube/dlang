@@ -1,5 +1,6 @@
 package smokeytube.dlang.item;
 
+import smokeytube.dlang.Dlang;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,6 +19,7 @@ public class Glue extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 1.0F, 1.0F);
+        playerEntity.applyStatusEffect(new StatusEffectInstance(Dlang.SPONSORED_BY_RAID_SHADOW_LEGENDS, 6 * 20));
         if (Math.random() < 0.5) {
             playerEntity.applyStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 6 * 20));
         }

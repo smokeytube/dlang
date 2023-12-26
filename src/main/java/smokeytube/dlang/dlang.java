@@ -145,6 +145,8 @@ public class Dlang implements ModInitializer {
 	public static final GenericItem RAW_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(RawSpaghettiFoodComponents.RAW_SPAGHETTI));
 	public static final GenericItem COOKED_SPAGHETTI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(CookedSpaghettiFoodComponents.COOKED_SPAGHETTI));
 	public static final GenericItem PELMENI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(PelmeniFoodComponents.PELMENI));
+	public static final GenericItem FLESH = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(FleshFoodComponents.FLESH));
+	public static final GenericItem COOKED_FLESH = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(CookedFleshFoodComponents.COOKED_FLESH));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
@@ -317,6 +319,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_spaghetti"), RAW_SPAGHETTI);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_spaghetti"), COOKED_SPAGHETTI);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pelmeni"), PELMENI);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flesh"), FLESH);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_flesh"), COOKED_FLESH);
 
 		// Blocks and their respective items
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);
