@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 public class RaghavEntity extends IronGolemEntity {
 	public RaghavEntity(EntityType<? extends RaghavEntity> entityType, World world) {
 		super(entityType, world);
+		this.setHealth(5.0F);
 	}
 
 	protected boolean burnsInDaylight() {
