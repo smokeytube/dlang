@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " @ "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        },
+        "@": {
+            "item": "dlang:corona_virus_spawn_egg"
+        }
+    },
+    "result": {
+        "item": "dlang:sourdough"
+    }
+}

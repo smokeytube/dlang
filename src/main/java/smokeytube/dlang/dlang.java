@@ -21,8 +21,6 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -234,6 +232,10 @@ public class Dlang implements ModInitializer {
 			new Item.Settings().group(ItemGroup.FOOD).food(ButterFoodComponents.BUTTER));
 	public static final GenericItem RYE_BREAD = new GenericItem(
 			new Item.Settings().group(ItemGroup.FOOD).food(RyeBreadFoodComponents.RYE_BREAD));
+	public static final GenericItem SOURDOUGH = new GenericItem(
+			new Item.Settings().group(ItemGroup.FOOD).food(SourdoughFoodComponents.SOURDOUGH));
+	public static final GenericItem CHEESE = new GenericItem(
+			new Item.Settings().group(ItemGroup.FOOD).food(CheeseFoodComponents.CHEESE));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F)
@@ -434,6 +436,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sklandrausis"), SKLANDRAUSIS);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "butter"), BUTTER);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rye_bread"), RYE_BREAD);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sourdough"), SOURDOUGH);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cheese"), CHEESE);
 
 		// Blocks and their respective items
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);
