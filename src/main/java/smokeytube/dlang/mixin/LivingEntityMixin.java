@@ -34,7 +34,7 @@ public abstract class LivingEntityMixin {
 
     @Inject(method = "onDeath", at = @At("HEAD"))
     private void onDeath(DamageSource damageSource_1, CallbackInfo ci) {
-        if (Math.random() > 0.99) {
+        if (Math.random() > 0.999) {
             MinecraftClient mc = MinecraftClient.getInstance();
             mc.inGameHud.addChatMessage(MessageType.SYSTEM, new LiteralText("You have angered the Gods..."), mc.player.getUuid());
         }
