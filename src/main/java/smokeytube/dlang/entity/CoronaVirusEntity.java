@@ -1,6 +1,9 @@
 package smokeytube.dlang.entity;
 
+import java.util.Random;
+
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.EscapeDangerGoal;
 import net.minecraft.entity.ai.goal.FollowTargetGoal;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
@@ -11,6 +14,8 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 
 public class CoronaVirusEntity extends HostileEntity {
@@ -39,5 +44,9 @@ public class CoronaVirusEntity extends HostileEntity {
         this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(4, new EscapeDangerGoal(this, 1.25D));
 		this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+	}
+
+	public static boolean canSpawn(EntityType<CoronaVirusEntity> type, ServerWorldAccess serverWorldAccess, SpawnReason spawnReason, BlockPos pos, Random random) {
+        return canSpawn(type, serverWorldAccess, spawnReason, pos, random) && (spawnReason == SpawnReason.SPAWNER || serverWorldAccess.isSkyVisible(pos));
 	}
 }

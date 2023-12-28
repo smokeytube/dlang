@@ -214,6 +214,7 @@ public class Dlang implements ModInitializer {
 
 	// Status Effects
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
+	public static final StatusEffect VAXXED = new VaxxedStatusEffect();
 
 	@Override
 	public void onInitialize() {
@@ -368,6 +369,7 @@ public class Dlang implements ModInitializer {
 
 		// Status Effects
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"), SPONSORED_BY_RAID_SHADOW_LEGENDS);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "vaxxed"), VAXXED);
 
 		// Init
 		SpawnInit.init();

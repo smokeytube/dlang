@@ -17,7 +17,7 @@ import net.minecraft.world.biome.SpawnSettings;
 @SuppressWarnings("deprecation")
 public class SpawnInit {
 
-    public static int SpawnRate = 100;
+    public static int SpawnRate = 10;
 
     public static void addSpawn(Predicate<BiomeSelectionContext> biomeSelector, SpawnGroup spawnGroup, SpawnSettings.SpawnEntry se) {
         Preconditions.checkArgument(se.type.getSpawnGroup() != SpawnGroup.MISC, 
@@ -47,10 +47,13 @@ public class SpawnInit {
             new SpawnSettings.SpawnEntry(Dlang.DRIP_CREEPER, SpawnRate, 2, 2));
 
         addSpawn(biomeSelector, Dlang.CORONA_VIRUS.getSpawnGroup(),
-            new SpawnSettings.SpawnEntry(Dlang.CORONA_VIRUS, SpawnRate, 3, 30));
+            new SpawnSettings.SpawnEntry(Dlang.CORONA_VIRUS, 20, 25, 30));
 
         addSpawn(biomeSelector, Dlang.MISHA.getSpawnGroup(),
             new SpawnSettings.SpawnEntry(Dlang.MISHA, SpawnRate, 2, 4));
+
+        addSpawn(biomeSelector, Dlang.TREE.getSpawnGroup(),
+            new SpawnSettings.SpawnEntry(Dlang.TREE, SpawnRate, 1, 2));
     }
 
     public static void init() {

@@ -4,10 +4,10 @@
   "package": "smokeytube.dlang.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "LivingEntityMixin"
   ],
-  "client": [
-    "ExampleMixin"
-  ],
+  "client": [],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }
