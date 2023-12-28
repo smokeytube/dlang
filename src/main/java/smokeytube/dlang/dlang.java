@@ -147,6 +147,9 @@ public class Dlang implements ModInitializer {
 	public static final GenericItem PELMENI = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(PelmeniFoodComponents.PELMENI));
 	public static final GenericItem FLESH = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(FleshFoodComponents.FLESH));
 	public static final GenericItem COOKED_FLESH = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(CookedFleshFoodComponents.COOKED_FLESH));
+	public static final GenericItem SKLANDRAUSIS = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(SklandrausisFoodComponents.SKLANDRAUSIS));
+	public static final GenericItem BUTTER = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(ButterFoodComponents.BUTTER));
+	public static final GenericItem RYE_BREAD = new GenericItem(new Item.Settings().group(ItemGroup.FOOD).food(RyeBreadFoodComponents.RYE_BREAD));
 
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
@@ -322,6 +325,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pelmeni"), PELMENI);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flesh"), FLESH);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_flesh"), COOKED_FLESH);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sklandrausis"), SKLANDRAUSIS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "butter"), BUTTER);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rye_bread"), RYE_BREAD);
 
 		// Blocks and their respective items
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seung_gi_hun"), SEUNG_GI_HUN);

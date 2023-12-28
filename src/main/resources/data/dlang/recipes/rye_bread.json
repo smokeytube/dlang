@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " ! "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        },
+        "!": {
+            "item": "minecraft:wheat_seeds"
+        }
+    },
+    "result": {
+        "item": "dlang:rye_bread",
+        "count": 6
+    }
+}
