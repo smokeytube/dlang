@@ -23,6 +23,7 @@
     "item.dlang.rye_bread": "Rye Bread",
     "item.dlang.sourdough": "Sourdough",
     "item.dlang.cheese": "Cheese",
+    "item.dlang.fools_gold": "Fool's Gold",
 
     "item.dlang.pan": "Pan",
 
@@ -112,6 +113,7 @@
     "block.dlang.raw_spaghetti_block": "Raw Spaghetti Block",
     "block.dlang.cooked_spaghetti_block": "Cooked Spaghetti Block",
     "block.dlang.dlang_lucky_block": "Dlang Block",
+    "block.dlang.fools_gold_ore": "Fool's Gold Ore",
 
     "entity.dlang.cat_cube": "Cat Cube",
     "entity.dlang.hacker_named_four_chan": "Hacker Named Four Chan",

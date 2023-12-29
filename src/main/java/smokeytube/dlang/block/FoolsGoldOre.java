@@ -16,13 +16,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class SeungGiHun extends Block {
+public class FoolsGoldOre extends Block {
 
     public static final IntProperty PROPERTY = IntProperty.of("model_value", 0, 1024);
-    public static Identifier ID = new Identifier("dlang", "seung_gi_hun");
+    public static Identifier ID = new Identifier("dlang", "fools_gold_ore");
 
-    public SeungGiHun() {
-        super(FabricBlockSettings.copyOf(Blocks.DIRT));
+    public FoolsGoldOre() {
+        super(FabricBlockSettings.copyOf(Blocks.GOLD_ORE));
         setDefaultState(getStateManager().getDefaultState().with(PROPERTY, 0));
     }
 

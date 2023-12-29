@@ -13,6 +13,7 @@ import smokeytube.dlang.item.other.*;
 import smokeytube.dlang.ore.DlangLuckyBlockOreFeature;
 import smokeytube.dlang.sounds.*;
 import smokeytube.dlang.biome.*;
+import smokeytube.dlang.block.*;
 import smokeytube.dlang.spawns.SpawnInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
@@ -62,6 +63,7 @@ public class Dlang implements ModInitializer {
 	public static final GenericItem KYLE_RITTENHOUSE = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
 	public static final IronEgg IRON_EGG = new IronEgg(new Item.Settings().group(ItemGroup.MISC));
 	public static final WitherMeal WITHER_MEAL = new WitherMeal(new Item.Settings().group(ItemGroup.MISC));
+	public static final GenericItem FOOLS_GOLD = new GenericItem(new Item.Settings().group(ItemGroup.MISC));
 
 	// Tools
 	public static final ToolItem EMERALD_SWORD = new SwordItem(EmeraldToolMaterial.INSTANCE, 0, -2.4F,
@@ -240,8 +242,9 @@ public class Dlang implements ModInitializer {
 			new Item.Settings().group(ItemGroup.FOOD).food(CheeseFoodComponents.CHEESE));
 
 	// Blocks
-	public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F)
-			.sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
+	// public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F)
+	// 		.sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
+	public static final Block SEUNG_GI_HUN = new SeungGiHun();
 	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)
 			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
 	public static final Block OCTA_PLANK = new Block(FabricBlockSettings.of(Material.WOOD).strength(15.0F, 15.0F)
@@ -252,6 +255,7 @@ public class Dlang implements ModInitializer {
 			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
 	public static final Block DLANG_LUCKY_BLOCK = new Block(FabricBlockSettings.of(Material.GLASS)
 			.strength(0.5F, 0.5F).sounds(BlockSoundGroup.GLASS));
+	public static final Block FOOLS_GOLD_ORE = new FoolsGoldOre();
 
 	// Entity
 	public static final EntityType<CubeEntity> CUBE = Registry.register(
@@ -329,6 +333,7 @@ public class Dlang implements ModInitializer {
 
 	// Ores
 	public static final ConfiguredFeature<?, ?> DLANG_LUCKY_BLOCK_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
+	public static final ConfiguredFeature<?, ?> FOOLS_GOLD_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
 
 
 	// Biomes
@@ -348,6 +353,7 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kyle_rittenhouse"), KYLE_RITTENHOUSE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_egg"), IRON_EGG);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wither_meal"), WITHER_MEAL);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fools_gold"), FOOLS_GOLD);
 
 		// Tools
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "emerald_sword"), EMERALD_SWORD);
@@ -466,6 +472,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dlang_lucky_block"), DLANG_LUCKY_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dlang_lucky_block"),
 				new BlockItem(DLANG_LUCKY_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fools_gold_ore"),
+				new BlockItem(FOOLS_GOLD_ORE, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
@@ -507,10 +516,11 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "vaxxed"), VAXXED);
 
 		// Ore
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "dlang_lucky_block_ore"), DLANG_LUCKY_BLOCK_ORE_FEATURE);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "dlang_lucky_block"), DLANG_LUCKY_BLOCK_ORE_FEATURE);
+		// Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE_FEATURE);
 
 		// Biomes
-		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, "obsidian"), SeungGiHunBiome.SURFACE_BUILDER);
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, "seung_gi_hun"), SeungGiHunBiome.SURFACE_BUILDER);
 		Registry.register(BuiltinRegistries.BIOME, SEUNG_GI_HUN_BIOME_KEY.getValue(), SeungGiHunBiome.createBiome());
 		OverworldBiomes.addContinentalBiome(SEUNG_GI_HUN_BIOME_KEY, OverworldClimate.TEMPERATE, 1);
 

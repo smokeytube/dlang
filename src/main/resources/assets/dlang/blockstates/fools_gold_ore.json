@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "dlang:block/fools_gold_ore"
+        }
+    }
+}
