@@ -15,6 +15,7 @@ public abstract class MixinDefaultBiomeFeatures {
     @Inject(method = "addDefaultOres", at = @At("HEAD"))
     private static void addDefaultOres(Builder builder, CallbackInfo info) {
         builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, Dlang.DLANG_LUCKY_BLOCK_ORE_FEATURE);
+        builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, Dlang.FOOLS_GOLD_ORE_FEATURE);
     }
 
 }

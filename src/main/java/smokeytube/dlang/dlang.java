@@ -10,7 +10,7 @@ import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.item.Tools.*;
 import smokeytube.dlang.item.generic.GenericItem;
 import smokeytube.dlang.item.other.*;
-import smokeytube.dlang.ore.DlangLuckyBlockOreFeature;
+import smokeytube.dlang.ore.*;
 import smokeytube.dlang.sounds.*;
 import smokeytube.dlang.biome.*;
 import smokeytube.dlang.block.*;
@@ -333,7 +333,7 @@ public class Dlang implements ModInitializer {
 
 	// Ores
 	public static final ConfiguredFeature<?, ?> DLANG_LUCKY_BLOCK_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
-	public static final ConfiguredFeature<?, ?> FOOLS_GOLD_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
+	public static final ConfiguredFeature<?, ?> FOOLS_GOLD_ORE_FEATURE = FoolsGoldOreFeature.FOOLS_GOLD_ORE_FEATURE;
 
 
 	// Biomes
@@ -517,7 +517,7 @@ public class Dlang implements ModInitializer {
 
 		// Ore
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "dlang_lucky_block"), DLANG_LUCKY_BLOCK_ORE_FEATURE);
-		// Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE_FEATURE);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE_FEATURE);
 
 		// Biomes
 		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, "seung_gi_hun"), SeungGiHunBiome.SURFACE_BUILDER);
