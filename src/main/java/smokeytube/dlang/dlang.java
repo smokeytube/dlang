@@ -10,6 +10,7 @@ import smokeytube.dlang.item.Ools.*;
 import smokeytube.dlang.item.Tools.*;
 import smokeytube.dlang.item.generic.GenericItem;
 import smokeytube.dlang.item.other.*;
+import smokeytube.dlang.ore.DlangLuckyBlockOreFeature;
 import smokeytube.dlang.sounds.*;
 import smokeytube.dlang.biome.*;
 import smokeytube.dlang.spawns.SpawnInit;
@@ -42,6 +43,7 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.util.Rarity;
 
 // трол
@@ -325,6 +327,10 @@ public class Dlang implements ModInitializer {
 	public static final StatusEffect SPONSORED_BY_RAID_SHADOW_LEGENDS = new SponsoredByRaidShadowLegendsStatusEffect();
 	public static final StatusEffect VAXXED = new VaxxedStatusEffect();
 
+	// Ores
+	public static final ConfiguredFeature<?, ?> DLANG_LUCKY_BLOCK_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
+
+
 	// Biomes
 	public static final SeungGiHunBiome SEUNG_GI_HUN_BIOME = new SeungGiHunBiome();
 	public static final RegistryKey<Biome> SEUNG_GI_HUN_BIOME_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier(MOD_ID, "seung_gi_hun"));
@@ -499,6 +505,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sponsored_by_raid_shadow_legends"),
 				SPONSORED_BY_RAID_SHADOW_LEGENDS);
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "vaxxed"), VAXXED);
+
+		// Ore
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "dlang_lucky_block_ore"), DLANG_LUCKY_BLOCK_ORE_FEATURE);
 
 		// Biomes
 		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, "obsidian"), SeungGiHunBiome.SURFACE_BUILDER);

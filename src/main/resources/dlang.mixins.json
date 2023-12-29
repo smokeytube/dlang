@@ -4,7 +4,8 @@
   "package": "smokeytube.dlang.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "MixinDefaultBiomeFeatures"
   ],
   "client": [],
   "server": [],

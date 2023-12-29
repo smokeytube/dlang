@@ -19,9 +19,10 @@ public class SpawnInit {
 
     public static int SpawnRate = 10;
 
-    public static void addSpawn(Predicate<BiomeSelectionContext> biomeSelector, SpawnGroup spawnGroup, SpawnSettings.SpawnEntry se) {
-        Preconditions.checkArgument(se.type.getSpawnGroup() != SpawnGroup.MISC, 
-        "MISC spawns pigs");
+    public static void addSpawn(Predicate<BiomeSelectionContext> biomeSelector, SpawnGroup spawnGroup,
+            SpawnSettings.SpawnEntry se) {
+        Preconditions.checkArgument(se.type.getSpawnGroup() != SpawnGroup.MISC,
+                "MISC spawns pigs");
 
         Identifier id = Registry.ENTITY_TYPE.getId(se.type);
         Preconditions.checkState(id != Registry.ENTITY_TYPE.getDefaultId(), "Unregistered entity type: %s", se.type);
@@ -35,25 +36,39 @@ public class SpawnInit {
         Predicate<BiomeSelectionContext> biomeSelector = (context) -> {
             Biome.Category category = context.getBiome().getCategory();
             return category != Biome.Category.NETHER && category != Biome.Category.THEEND
-            && category != Biome.Category.MESA && category != Biome.Category.DESERT
-            && category != Biome.Category.MUSHROOM && category != Biome.Category.EXTREME_HILLS
-            && category != Biome.Category.ICY && category != Biome.Category.OCEAN;
+                    && category != Biome.Category.MESA && category != Biome.Category.DESERT
+                    && category != Biome.Category.MUSHROOM && category != Biome.Category.EXTREME_HILLS
+                    && category != Biome.Category.ICY && category != Biome.Category.OCEAN;
         };
 
-        addSpawn(biomeSelector, Dlang.HACKER_NAMED_FOUR_CHAN.getSpawnGroup(), 
-            new SpawnSettings.SpawnEntry(Dlang.HACKER_NAMED_FOUR_CHAN, SpawnRate, 2, 4));
+        Predicate<BiomeSelectionContext> biomeSelectorCatCube = (context) -> {
+            Biome.Category category = context.getBiome().getCategory();
+            return category != Biome.Category.NETHER && category != Biome.Category.THEEND
+                    && category != Biome.Category.MESA && category != Biome.Category.RIVER
+                    && category != Biome.Category.MUSHROOM && category != Biome.Category.EXTREME_HILLS
+                    && category != Biome.Category.ICY && category != Biome.Category.OCEAN
+                    && category != Biome.Category.SWAMP && category != Biome.Category.FOREST
+                    && category != Biome.Category.BEACH && category != Biome.Category.PLAINS
+                    && category != Biome.Category.JUNGLE && category != Biome.Category.TAIGA;
+        };
+
+        addSpawn(biomeSelector, Dlang.HACKER_NAMED_FOUR_CHAN.getSpawnGroup(),
+                new SpawnSettings.SpawnEntry(Dlang.HACKER_NAMED_FOUR_CHAN, SpawnRate, 2, 4));
 
         addSpawn(biomeSelector, Dlang.DRIP_CREEPER.getSpawnGroup(),
-            new SpawnSettings.SpawnEntry(Dlang.DRIP_CREEPER, SpawnRate, 2, 2));
+                new SpawnSettings.SpawnEntry(Dlang.DRIP_CREEPER, SpawnRate, 2, 2));
 
         addSpawn(biomeSelector, Dlang.CORONA_VIRUS.getSpawnGroup(),
-            new SpawnSettings.SpawnEntry(Dlang.CORONA_VIRUS, 20, 25, 30));
+                new SpawnSettings.SpawnEntry(Dlang.CORONA_VIRUS, SpawnRate, 25, 30));
 
         addSpawn(biomeSelector, Dlang.MISHA.getSpawnGroup(),
-            new SpawnSettings.SpawnEntry(Dlang.MISHA, SpawnRate, 2, 4));
+                new SpawnSettings.SpawnEntry(Dlang.MISHA, SpawnRate, 2, 4));
 
         addSpawn(biomeSelector, Dlang.TREE.getSpawnGroup(),
-            new SpawnSettings.SpawnEntry(Dlang.TREE, SpawnRate, 1, 2));
+                new SpawnSettings.SpawnEntry(Dlang.TREE, SpawnRate, 1, 2));
+
+        addSpawn(biomeSelectorCatCube, Dlang.CUBE.getSpawnGroup(),
+                new SpawnSettings.SpawnEntry(Dlang.CUBE, SpawnRate*2, 1, 5));
     }
 
     public static void init() {
