@@ -248,6 +248,8 @@ public class Dlang implements ModInitializer {
 			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
 	public static final Block COOKED_SPAGHETTI_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)
 			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
+	public static final Block DLANG_LUCKY_BLOCK = new Block(FabricBlockSettings.of(Material.GLASS)
+			.strength(0.5F, 0.5F).sounds(BlockSoundGroup.GLASS));
 
 	// Entity
 	public static final EntityType<CubeEntity> CUBE = Registry.register(
@@ -455,6 +457,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cooked_spaghetti_block"), COOKED_SPAGHETTI_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_spaghetti_block"),
 				new BlockItem(COOKED_SPAGHETTI_BLOCK, new Item.Settings().group(ItemGroup.FOOD)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dlang_lucky_block"), DLANG_LUCKY_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dlang_lucky_block"),
+				new BlockItem(DLANG_LUCKY_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());

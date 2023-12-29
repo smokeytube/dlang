@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "dlang:block/dlang_lucky_block"
+        }
+    }
+}

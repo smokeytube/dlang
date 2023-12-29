@@ -1,0 +1,1145 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:butter"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cheese"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cooked_flesh"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cooked_glasses"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cooked_spaghetti"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cooked_spaghetti_block"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 2,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:dlang_lucky_block"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_axe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_boots"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_chestplate"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_helmet"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_hoe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_ingot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_leggings"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_pickaxe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_shovel"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:emerald_sword"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:fifty_fifty"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:flesh"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:fortnite_card"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glasses"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_axe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_boots"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_chestplate"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_helmet"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_hoe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_leggings"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_pickaxe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_shovel"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_sword"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glue"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_egg"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:kyle_rittenhouse"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_kui_mina"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_meie_maast_ida_pool"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_monikord_veab"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_orn_haare"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_politruk"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:music_disc_vanapoisi_reilender"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:octa_plank"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:pan"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:pelmeni"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:pringles_can"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:raw_beef_block"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:raw_spaghetti"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:raw_spaghetti_block"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:rye_bread"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:seung_gi_hun"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:sklandrausis"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:sourdough"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_boots"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_chestplate"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_helmet"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_leggings"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:while_true"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wither_meal"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wood_boots"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wood_chestplate"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wood_helmet"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wood_leggings"
+                }
+            ]
+        }
+    ]
+}

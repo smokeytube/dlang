@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dlang:block/dlang_lucky_block_top",
+    "side": "dlang:block/dlang_lucky_block_side"
+  }
+}
