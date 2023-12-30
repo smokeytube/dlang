@@ -114,6 +114,7 @@
     "block.dlang.cooked_spaghetti_block": "Cooked Spaghetti Block",
     "block.dlang.dlang_lucky_block": "Dlang Block",
     "block.dlang.fools_gold_ore": "Fool's Gold Ore",
+    "block.dlang.static_block": "Static",
 
     "entity.dlang.cat_cube": "Cat Cube",
     "entity.dlang.hacker_named_four_chan": "Hacker Named Four Chan",
@@ -146,10 +147,6 @@
     "item.dlang.music_disc_kui_mina.desc": "Lõõtsavägilased - Kui mina ükskord noores eas, võtsin vana naise",
     "item.dlang.music_disc_monikord_veab": "Mõnikord Veab",
     "item.dlang.music_disc_monikord_veab.desc": "Juhan Uppin - Mõnikord Veab",
-
-
-
-
 
     "death.attack.cramming": "%1$s attended a Travis Scott concert",
     "deathScreen.title": "You dead foo!",

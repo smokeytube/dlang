@@ -8,12 +8,12 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.Identifier;
 
-public class RawSpaghettiBlock extends Block {
+public class CookedSpaghettiBlock extends Block {
 
     public static final IntProperty PROPERTY = IntProperty.of("model_value", 0, 1024);
-    public static Identifier ID = new Identifier("dlang", "raw_spaghetti_block");
+    public static Identifier ID = new Identifier("dlang", "cooked_spaghetti_block");
 
-    public RawSpaghettiBlock() {
+    public CookedSpaghettiBlock() {
         super(FabricBlockSettings.copyOf(Blocks.FIRE_CORAL_BLOCK));
         setDefaultState(getStateManager().getDefaultState().with(PROPERTY, 0));
     }

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "dlang:block/static_block"
+        }
+    }
+}

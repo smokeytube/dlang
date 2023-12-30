@@ -11,7 +11,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -30,7 +30,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -97,25 +97,6 @@
             ]
         },
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0.0,
-                                "max": 1,
-                                "type": "minecraft:uniform"
-                            }
-                        }
-                    ],
-                    "name": "dlang:cooked_spaghetti_block"
-                }
-            ]
-        },
-        {
             "rolls": 2,
             "entries": [
                 {
@@ -125,69 +106,31 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 2,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:cooked_spaghetti_block"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
                                 "type": "minecraft:uniform"
                             }
                         }
                     ],
                     "name": "dlang:dlang_lucky_block"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0.0,
-                                "max": 1,
-                                "type": "minecraft:uniform"
-                            }
-                        }
-                    ],
-                    "name": "dlang:emerald_axe"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0.0,
-                                "max": 1,
-                                "type": "minecraft:uniform"
-                            }
-                        }
-                    ],
-                    "name": "dlang:emerald_boots"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0.0,
-                                "max": 1,
-                                "type": "minecraft:uniform"
-                            }
-                        }
-                    ],
-                    "name": "dlang:emerald_chestplate"
                 }
             ]
         },
@@ -225,7 +168,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:emerald_hoe"
+                    "name": "dlang:emerald_ickpaex"
                 }
             ]
         },
@@ -263,7 +206,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:emerald_leggings"
+                    "name": "dlang:emerald_kaex"
                 }
             ]
         },
@@ -282,7 +225,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:emerald_pickaxe"
+                    "name": "dlang:emerald_ohe"
                 }
             ]
         },
@@ -301,7 +244,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:emerald_shovel"
+                    "name": "dlang:emerald_shvl"
                 }
             ]
         },
@@ -320,7 +263,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:emerald_sword"
+                    "name": "dlang:emerald_svrod"
                 }
             ]
         },
@@ -377,6 +320,44 @@
                             }
                         }
                     ],
+                    "name": "dlang:fools_gold"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:fools_gold_ore"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
                     "name": "dlang:fortnite_card"
                 }
             ]
@@ -397,25 +378,6 @@
                         }
                     ],
                     "name": "dlang:glasses"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0.0,
-                                "max": 1,
-                                "type": "minecraft:uniform"
-                            }
-                        }
-                    ],
-                    "name": "dlang:glass_axe"
                 }
             ]
         },
@@ -491,7 +453,26 @@
                             }
                         }
                     ],
-                    "name": "dlang:glass_hoe"
+                    "name": "dlang:glass_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:glass_kaex"
                 }
             ]
         },
@@ -529,7 +510,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:glass_pickaxe"
+                    "name": "dlang:glass_ohe"
                 }
             ]
         },
@@ -548,7 +529,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:glass_shovel"
+                    "name": "dlang:glass_shvl"
                 }
             ]
         },
@@ -567,7 +548,7 @@
                             }
                         }
                     ],
-                    "name": "dlang:glass_sword"
+                    "name": "dlang:glass_svrod"
                 }
             ]
         },
@@ -591,6 +572,101 @@
             ]
         },
         {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:gold_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:gold_kaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:gold_ohe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:gold_shvl"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:gold_svrod"
+                }
+            ]
+        },
+        {
             "rolls": 2,
             "entries": [
                 {
@@ -600,12 +676,107 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
                     ],
                     "name": "dlang:iron_egg"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_kaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_ohe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_shvl"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:iron_svrod"
                 }
             ]
         },
@@ -757,6 +928,101 @@
                             }
                         }
                     ],
+                    "name": "dlang:netherite_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:netherite_kaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:netherite_ohe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:netherite_shvl"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:netherite_svrod"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
                     "name": "dlang:octa_plank"
                 }
             ]
@@ -790,7 +1056,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -819,7 +1085,7 @@
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
                 {
                     "type": "minecraft:item",
@@ -828,7 +1094,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 1,
+                                "max": 16,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -857,7 +1123,7 @@
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
                 {
                     "type": "minecraft:item",
@@ -866,7 +1132,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 1,
+                                "max": 16,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -885,7 +1151,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -895,7 +1161,7 @@
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
                 {
                     "type": "minecraft:item",
@@ -904,7 +1170,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 1,
+                                "max": 16,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -923,7 +1189,7 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
@@ -942,12 +1208,31 @@
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 0.0,
-                                "max": 16,
+                                "max": 8,
                                 "type": "minecraft:uniform"
                             }
                         }
                     ],
                     "name": "dlang:sourdough"
+                }
+            ]
+        },
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 16,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:static_block"
                 }
             ]
         },
@@ -1023,7 +1308,102 @@
                             }
                         }
                     ],
+                    "name": "dlang:stone_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_kaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
                     "name": "dlang:stone_leggings"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_ohe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_shvl"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:stone_svrod"
                 }
             ]
         },
@@ -1062,6 +1442,101 @@
                         }
                     ],
                     "name": "dlang:wither_meal"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wooden_ickpaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wooden_kaex"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wooden_ohe"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wooden_shvl"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0.0,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        }
+                    ],
+                    "name": "dlang:wooden_svrod"
                 }
             ]
         },

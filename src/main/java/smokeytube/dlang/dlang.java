@@ -242,20 +242,14 @@ public class Dlang implements ModInitializer {
 			new Item.Settings().group(ItemGroup.FOOD).food(CheeseFoodComponents.CHEESE));
 
 	// Blocks
-	// public static final Block SEUNG_GI_HUN = new Block(FabricBlockSettings.of(Material.BAMBOO).strength(5.0F, 5.0F)
-	// 		.sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.HOES));
 	public static final Block SEUNG_GI_HUN = new SeungGiHun();
-	public static final Block RAW_BEEF_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)
-			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.NETHER_WART).breakByTool(FabricToolTags.HOES));
-	public static final Block OCTA_PLANK = new Block(FabricBlockSettings.of(Material.WOOD).strength(15.0F, 15.0F)
-			.sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
-	public static final Block RAW_SPAGHETTI_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)
-			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
-	public static final Block COOKED_SPAGHETTI_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT)
-			.strength(2.0F, 2.0F).sounds(BlockSoundGroup.FUNGUS).breakByTool(FabricToolTags.HOES));
-	public static final Block DLANG_LUCKY_BLOCK = new Block(FabricBlockSettings.of(Material.GLASS)
-			.strength(0.5F, 0.5F).sounds(BlockSoundGroup.GLASS));
+	public static final Block RAW_BEEF_BLOCK = new RawBeefBlock();
+	public static final Block OCTA_PLANK = new OctaPlank();
+	public static final Block RAW_SPAGHETTI_BLOCK = new RawSpaghettiBlock();
+	public static final Block COOKED_SPAGHETTI_BLOCK = new CookedSpaghettiBlock();
+	public static final Block DLANG_LUCKY_BLOCK = new DlangLuckyBlock();
 	public static final Block FOOLS_GOLD_ORE = new FoolsGoldOre();
+	public static final Block STATIC_BLOCK = new StaticBlock();
 
 	// Entity
 	public static final EntityType<CubeEntity> CUBE = Registry.register(
@@ -334,6 +328,7 @@ public class Dlang implements ModInitializer {
 	// Ores
 	public static final ConfiguredFeature<?, ?> DLANG_LUCKY_BLOCK_ORE_FEATURE = DlangLuckyBlockOreFeature.DLANG_LUCKY_BLOCK_ORE_FEATURE;
 	public static final ConfiguredFeature<?, ?> FOOLS_GOLD_ORE_FEATURE = FoolsGoldOreFeature.FOOLS_GOLD_ORE_FEATURE;
+	public static final ConfiguredFeature<?, ?> STATIC_ORE_FEATURE = StaticOreFeature.STATIC_ORE_FEATURE;
 
 
 	// Biomes
@@ -475,6 +470,9 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fools_gold_ore"),
 				new BlockItem(FOOLS_GOLD_ORE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "static_block"), STATIC_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "static_block"),
+				new BlockItem(STATIC_BLOCK, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		// Entity
 		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
@@ -518,6 +516,7 @@ public class Dlang implements ModInitializer {
 		// Ore
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "dlang_lucky_block"), DLANG_LUCKY_BLOCK_ORE_FEATURE);
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "fools_gold_ore"), FOOLS_GOLD_ORE_FEATURE);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "static_block"), STATIC_ORE_FEATURE);
 
 		// Biomes
 		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, "seung_gi_hun"), SeungGiHunBiome.SURFACE_BUILDER);
