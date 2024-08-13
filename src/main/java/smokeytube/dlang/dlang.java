@@ -241,6 +241,9 @@ public class Dlang implements ModInitializer {
 	public static final GenericItem CHEESE = new GenericItem(
 			new Item.Settings().group(ItemGroup.FOOD).food(CheeseFoodComponents.CHEESE));
 
+	public static final ToolItem STICK_SWORD = new SwordItem(ToolMaterials.WOOD, 1, -0.4F,
+			new Item.Settings().group(ItemGroup.COMBAT));
+
 	// Blocks
 	public static final Block SEUNG_GI_HUN = new SeungGiHun();
 	public static final Block RAW_BEEF_BLOCK = new RawBeefBlock();
@@ -434,6 +437,8 @@ public class Dlang implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_kaex"), GLASS_KAEX);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_ohe"), GLASS_OHE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glass_ickpaex"), GLASS_ICKPAEX);
+
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stick_sword"), STICK_SWORD);
 
 		// Food
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_glasses"), COOKED_GLASSES);

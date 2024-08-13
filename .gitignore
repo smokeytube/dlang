@@ -34,4 +34,12 @@ run/
 
 handy_scripts/
 
+saves/
+config/
+crash-reports/
+logs/
+
+usercache.json
+options.txt
+
 TODO
